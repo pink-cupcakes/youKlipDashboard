@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "initial prototype",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skill-shot/dev_site.git"
+  },
+  "author": "pinkwaffles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skill-shot/dev_site/issues"
+  },
+  "homepage": "https://github.com/skill-shot/dev_site#readme",
+  "dependencies": {
+    "aws-sdk": "^2.245.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  }
+}
