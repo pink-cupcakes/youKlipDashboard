@@ -9,13 +9,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-AWS.config.update({region:'us-west-1'});
+AWS.config.update({ region: 'us-west-1' });
 
-ec2 = new AWS.EC2({apiVersion: '2016-11-15'});
+let ec2 = new AWS.EC2({ apiVersion: '2016-11-15' });
 
 app.get('/', (req, res) => {
-    user.getUser();
-    // console.log(test);
+  user.getUser();
+  // console.log(test);
 });
 
 // let params = {
@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 //     };
 // });
 
-let server = app.listen(5000, function () {
-    let port = server.address().port;
-    console.log('Listening to port ', port);
+let server = app.listen(5000, function() {
+  let port = server.address().port;
+  console.log('Listening to port ', port);
 });
