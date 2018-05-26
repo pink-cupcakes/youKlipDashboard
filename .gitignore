@@ -1,2 +1,8 @@
 # Dependency directory
 node_modules/
+
+AWS certs
+skillshot.pem
+
+RDS files
+config.js
