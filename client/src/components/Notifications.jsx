@@ -8,7 +8,7 @@ class Notification extends Component {
     return (
       <div className="notification">
         <Link to="/">
-          <div className="header-name">Notification Bar On Top</div>
+          <div className="notification-content">Notification Bar On Top</div>
         </Link>
       </div>
     );

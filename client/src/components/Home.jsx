@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 class Home extends Component {
   render() {
     return (
-      <div className="header">
-        <div className="header-name">Home Page</div>
+      <div className="home">
+        <div className="">Home Page</div>
       </div>
     );
   }

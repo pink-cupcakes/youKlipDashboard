@@ -1,7 +1,21 @@
+@font-face {
+  font-family: gotham-black;
+  src: url('../font/GOTHAM-BLACK.TTF');
+}
+
+@font-face {
+  font-family: gotham-light;
+  src: url('../font/GOTHAM-LIGHT.TTF');
+}
+
 html,
 body,
 #root,
 .app {
   width: 100%;
   height: 100%;
+  font-family: gotham-light;
+}
+
+button {
 }
