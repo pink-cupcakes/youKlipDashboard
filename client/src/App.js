@@ -6,7 +6,7 @@ import './assets/stylesheets/app.css';
 
 import Notifications from './components/Notifications';
 import Header from './components/Header';
-import Home from './components/Home';
+import Login from './components/Login';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -16,7 +16,8 @@ class App extends Component {
         <div className="app">
           <Notifications />
           <Header />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+
           <Footer />
         </div>
       </Router>

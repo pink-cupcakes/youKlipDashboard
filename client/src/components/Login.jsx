@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import '../assets/stylesheets/home.css';
+import '../assets/stylesheets/login.css';
 
 import { Link } from 'react-router-dom';
 
-class Home extends Component {
+class Login extends Component {
   render() {
     return (
       <div className="login-background-img">
@@ -41,4 +41,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Login;
