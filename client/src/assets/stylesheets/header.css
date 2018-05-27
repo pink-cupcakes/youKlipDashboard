@@ -4,6 +4,10 @@
   --header-font-color: #f1f1f1;
 }
 
+.header-all {
+  display: none;
+}
+
 .header {
   position: fixed;
   /* width: 100%; */

@@ -9,10 +9,10 @@ class Home extends Component {
       <div className="login-background-img">
         <div className="login-background">
           <div className="login-title">
-            <div className="">SKILLSHOT</div>
-            <div className="">
-              Join and share your moments with your friends{' '}
-            </div>
+            <h1 className="login-title">SKILLSHOT</h1>
+            <h2 className="login-subtitle">
+              Join and share your moments with your friends
+            </h2>
           </div>
           <div className="login-button-holder">
             <button className="login-button">

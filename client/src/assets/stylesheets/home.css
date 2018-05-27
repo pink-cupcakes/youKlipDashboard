@@ -4,9 +4,7 @@
   background: url(../images/pubg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 175%;
-  /* position: absolute; */
-  /* z-index: 0; */
+  background-size: 220%;
 }
 
 .login-background {
@@ -14,21 +12,30 @@
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgb(242, 177, 126, 0.2) 48%,
-    rgb(32, 32, 38, 1) 50%
+    rgb(242, 177, 126, 0.2) 50%,
+    rgb(32, 32, 38, 1) 57%
   );
 
   position: absolute;
-  /* z-index: 1; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 }
 
 .login-title {
+  font-family: GOTHAM-BLACK;
   color: #ffffff;
-  width: 90%;
+  width: 80%;
+}
+
+.login-title > h1 {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+.login-title > h2 {
+  font-size: 1em;
+  font-family: GOTHAM-LIGHT;
 }
 
 .login-button-holder {
@@ -41,7 +48,7 @@
 .login-button {
   border-radius: 1px;
   color: #ffffff;
-  margin-top: 10px;
+  margin-top: 0.75em;
   width: 80%;
   box-sizing: border-box;
 
@@ -51,17 +58,11 @@
 }
 
 .login-button > * {
-  padding: 10px 0;
+  padding: 0.75em 0;
 }
-
-.login-button:last-child {
-  border: 1px solid #969696;
-}
-
 .login-icon {
   width: 11%;
 }
-
 .login-button-text {
   width: 89%;
 }
@@ -72,33 +73,21 @@
 .google {
   background: #dd4b39;
 }
-
 .facebook-icon {
   background: #5c82d2;
 }
 .facebook {
   background: #3b5998;
 }
-
 .email {
-  /* background: none; */
-  opacity: 0.1;
+  background: rgb(33, 33, 39, 0.5);
 }
-
 .email-icon {
-  background: #000000;
-  opacity: 0.2;
-}
-
-.signup-button {
-  background: #ffffff;
-  color: #f9653a;
-  border-radius: 0px 20px 20px 0px;
-  padding: 5px 20px;
+  background: rgb(33, 33, 39, 0.7);
 }
 
 .register-holder {
-  height: 10%;
+  height: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
