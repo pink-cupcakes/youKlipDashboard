@@ -6,8 +6,36 @@ import { Link } from 'react-router-dom';
 class Home extends Component {
   render() {
     return (
-      <div className="home">
-        <div className="">Home Page</div>
+      <div className="login-background-img">
+        <div className="login-background">
+          <div className="login-title">
+            <div className="">SKILLSHOT</div>
+            <div className="">
+              Join and share your moments with your friends{' '}
+            </div>
+          </div>
+          <div className="login-button-holder">
+            <button className="login-button">
+              <div className="login-icon google-icon">Icon</div>
+              <div className="login-button-text google">Log in with Google</div>
+            </button>
+            <button className="login-button">
+              <div className="login-icon facebook-icon">Icon</div>
+              <div className="login-button-text facebook">
+                Log in with Facebook
+              </div>
+            </button>
+            <button className="login-button">
+              <div className="login-icon email-icon">Icon</div>
+              <div className="login-button-text email">Log in with email</div>
+            </button>
+          </div>
+          <div className="register-holder">
+            <Link to="/">
+              <div className="register">Not registered?</div>
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }

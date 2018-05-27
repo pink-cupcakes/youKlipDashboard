@@ -1,0 +1,112 @@
+.login-background-img {
+  height: 100%;
+  width: 100%;
+  background: url(../images/pubg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 175%;
+  /* position: absolute; */
+  /* z-index: 0; */
+}
+
+.login-background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgb(242, 177, 126, 0.2) 48%,
+    rgb(32, 32, 38, 1) 50%
+  );
+
+  position: absolute;
+  /* z-index: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-title {
+  color: #ffffff;
+  width: 90%;
+}
+
+.login-button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-button {
+  border-radius: 1px;
+  color: #ffffff;
+  margin-top: 10px;
+  width: 80%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.login-button > * {
+  padding: 10px 0;
+}
+
+.login-button:last-child {
+  border: 1px solid #969696;
+}
+
+.login-icon {
+  width: 11%;
+}
+
+.login-button-text {
+  width: 89%;
+}
+
+.google-icon {
+  background: #ad1a08;
+}
+.google {
+  background: #dd4b39;
+}
+
+.facebook-icon {
+  background: #5c82d2;
+}
+.facebook {
+  background: #3b5998;
+}
+
+.email {
+  /* background: none; */
+  opacity: 0.1;
+}
+
+.email-icon {
+  background: #000000;
+  opacity: 0.2;
+}
+
+.signup-button {
+  background: #ffffff;
+  color: #f9653a;
+  border-radius: 0px 20px 20px 0px;
+  padding: 5px 20px;
+}
+
+.register-holder {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}

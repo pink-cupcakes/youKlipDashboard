@@ -1,8 +1,14 @@
 .footer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  background: orange;
+  position: absolute;
+  bottom: 0;
+
+  display: none;
 }
 
 .footer > * {
-  padding: 20px 5px;
+  padding: 0px 5px;
 }
