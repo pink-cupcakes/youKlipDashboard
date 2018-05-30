@@ -7,7 +7,9 @@ import './assets/stylesheets/app.css';
 import Notifications from './components/Notifications';
 import Header from './components/Header';
 import Login from './components/Login';
+import Home from './components/Home';
 import Footer from './components/Footer';
+
 
 class App extends Component {
   render() {
@@ -15,7 +17,8 @@ class App extends Component {
       <Router>
         <div className="app">
           <Notifications />
-          <Header />
+          <Route exact path="/home" component={Header} />
+          <Home />
           <Route exact path="/login" component={Login} />
 
           <Footer />
