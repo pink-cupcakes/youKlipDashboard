@@ -16,6 +16,9 @@ class Header extends Component {
               <img className="header-logo" src={logoShort} alt="header-logo" />
             </Link>
             <Link to="/"> Browse </Link>
+            <Link to="/"> Get Desktop </Link>
+            <Link to="/"> Store </Link>
+            <Link to="/"> <i className="fas fa-ellipsis-h"></i> </Link>
           </div>
           <Search />
 
