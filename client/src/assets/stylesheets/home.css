@@ -1,0 +1,68 @@
+:root {
+  --main-video-width: 80vw;
+  --main-video-height: 40vh;
+}
+
+/* sort bar */
+.home-sort-bar {
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto 8px auto;
+  width: calc(var(--main-video-height)*1/0.56);
+}
+
+.home-sort-bar > * {
+  font-family: GOTHAM-BLACK;
+  color: var(--color-lighter-gray);
+  padding: 8px 15px;
+  border-bottom: 1px solid var(--color-lighter-gray);
+}
+
+.home-sort-bar > *:hover {
+  color: var(--color-black);
+}
+
+.sort-chosen {
+  color: var(--color-black);
+  border-bottom: 2px solid var(--color-black);
+}
+
+.sort-bar-leftover {
+  width: 100%;
+}
+
+/* video holder */
+.main-video-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-video-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: calc(var(--main-video-height)*1/0.56);
+  margin: 10px 0 8px 0;
+}
+
+.main-video-userimg {
+  width: 40px;
+  height: 40px;
+  background: var(--color-light-orange);
+  margin-right: 10px;
+}
+
+
+.main-video {
+  height: var(--main-video-height);
+  width: calc(var(--main-video-height)*1/0.56);
+}
+
+/* add media query and change to width depending
+on what's smaller */
+/* .main-video {
+width: var(--main-video-width);
+height: calc(var(--main-video-width) * 0.56);
+} */
