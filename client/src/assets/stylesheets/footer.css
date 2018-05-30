@@ -10,8 +10,10 @@
   padding: 2em .5em;
   font-size: .7em;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .footer > * {
   padding: 0px 5px;
+  text-decoration: none;
 }

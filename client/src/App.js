@@ -17,7 +17,8 @@ class App extends Component {
       <Router>
         <div className="app">
           <Notifications />
-          <Route exact path="/home" component={Header} />
+          <Header />
+          <Route exact path="/home" component={Home} />
           <Home />
           <Route exact path="/login" component={Login} />
 
