@@ -3,9 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background: orange;
-  position: absolute;
-  bottom: 0;
+  background: var(--color-light-orange);
 
   padding: 2em .5em;
   font-size: .7em;

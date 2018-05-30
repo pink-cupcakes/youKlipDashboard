@@ -42,11 +42,13 @@
   width: 100%;
 }
 
+
 /* feed games */
 .home-feed-games {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .home-feed-games > * {
@@ -58,14 +60,22 @@
   white-space: nowrap;
 }
 
+.home-feed-games > *:hover {
+  background: var(--color-lighter-gray);
+}
+
 
 /* video holder */
 .main-video-holder {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
+  margin-bottom: 30px;
+}
+
+.main-video-title {
+  font-family: GOTHAM-BLACK;
+  margin-bottom: 5px;
 }
 
 .main-video-description {
@@ -73,7 +83,7 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  margin: 10px 0 8px 0;
+  margin: 0px 0 8px 0;
 }
 
 .main-video-userimg {
@@ -82,7 +92,6 @@
   background: var(--color-light-orange);
   margin-right: 10px;
 }
-
 
 .main-video {
   height: var(--main-video-height);

@@ -31,12 +31,10 @@ class Home extends Component {
           <div className=""> Skyrim </div>
           <div className=""> Witcher </div>
           <div className=""> Etc </div>
-
-
-
         </div>
 
         <div className="main-video-holder">
+          <div className="main-video-title">LoL Daily Funny Moments #5 | Support is Shjjjtttt</div>
           <div className="main-video-description">
             <div className="main-video-userimg"></div>
             <div>
@@ -47,6 +45,22 @@ class Home extends Component {
           <iframe
             className="main-video"
             src="https://www.youtube.com/embed/V62pGsjKNKQ?&autoplay=1&mute=1"
+            allow="autoplay; encrypted-media; fullscreen">
+          </iframe>
+        </div>
+
+        <div className="main-video-holder">
+          <div className="main-video-title">Trolling in Overwatch</div>
+          <div className="main-video-description">
+            <div className="main-video-userimg"></div>
+            <div>
+              <h2>Username</h2>
+              <h3>playing Overwatch</h3>
+            </div>
+          </div>
+          <iframe
+            className="main-video"
+            src="https://www.youtube.com/embed/j1u_uvCwv5g"
             allow="autoplay; encrypted-media; fullscreen">
           </iframe>
         </div>
