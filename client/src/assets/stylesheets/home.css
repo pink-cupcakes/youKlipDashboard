@@ -1,6 +1,7 @@
 :root {
   --main-video-width: 80vw;
   --main-video-height: 40vh;
+  --side-video-height: 5vh;
 }
 
 .home {
@@ -104,3 +105,39 @@ on what's smaller */
 width: var(--main-video-width);
 height: calc(var(--main-video-width) * 0.56);
 } */
+
+
+.side-video-holder {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+
+  /* justify-content: left; */
+  /* align-items: left; */
+  /* align-content: left; */
+  /* width: var(--main-video-height)*1/0.56; */
+  width: 100%;
+}
+
+.side-video-description-holder {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+.side-video-userimg {
+  /* width: 40px; */
+  /* height: 40px; */
+  /* background: var(--color-orange); */
+  display: hidden;
+}
+.side-video-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.side-
+
+.side-video {
+  height: var(--side-video-height);
+  width: calc(var(--side-video-height) / 0.56);
+}
