@@ -49,22 +49,80 @@ class Home extends Component {
           </iframe>
         </div>
 
-        <div className="side-video-holder">
-          <div className="side-video-description-holder">
-            <div className="side-video-title">Trolling in Overwatch</div>
-            <div className="side-video-description">
-              <div className="side-video-userimg"></div>
-              <div>
-                <h2>Username</h2>
-                <h3>playing Overwatch</h3>
+        <div className="all-side-videos">
+
+          <div className="side-video-holder">
+            <div className="side-video-description-holder">
+              <div className="side-video-title">Trolling in Overwatch</div>
+              <div className="side-video-description">
+                <div className="side-video-userimg"></div>
+                <div>
+                  <h2>Username</h2>
+                  <h3>playing Overwatch</h3>
+                </div>
               </div>
             </div>
+            <iframe
+              className="side-video"
+              src="https://www.youtube.com/embed/j1u_uvCwv5g"
+              allow="autoplay; encrypted-media; fullscreen">
+            </iframe>
           </div>
-          <iframe
-            className="side-video"
-            src="https://www.youtube.com/embed/j1u_uvCwv5g"
-            allow="autoplay; encrypted-media; fullscreen">
-          </iframe>
+
+          <div className="side-video-holder">
+            <div className="side-video-description-holder">
+              <div className="side-video-title">Trolling in Overwatch</div>
+              <div className="side-video-description">
+                <div className="side-video-userimg"></div>
+                <div>
+                  <h2>Username</h2>
+                  <h3>playing Overwatch</h3>
+                </div>
+              </div>
+            </div>
+            <iframe
+              className="side-video"
+              src="https://www.youtube.com/embed/j1u_uvCwv5g"
+              allow="autoplay; encrypted-media; fullscreen">
+            </iframe>
+          </div>
+
+          <div className="side-video-holder">
+            <div className="side-video-description-holder">
+              <div className="side-video-title">Trolling in Overwatch</div>
+              <div className="side-video-description">
+                <div className="side-video-userimg"></div>
+                <div>
+                  <h2>Username</h2>
+                  <h3>playing Overwatch</h3>
+                </div>
+              </div>
+            </div>
+            <iframe
+              className="side-video"
+              src="https://www.youtube.com/embed/j1u_uvCwv5g"
+              allow="autoplay; encrypted-media; fullscreen">
+            </iframe>
+          </div>
+
+          <div className="side-video-holder">
+              <div className="side-video-description-holder">
+                <div className="side-video-title">Trolling in Overwatch</div>
+                <div className="side-video-description">
+                  <div className="side-video-userimg"></div>
+                  <div>
+                    <h2>Username</h2>
+                    <h3>playing Overwatch</h3>
+                  </div>
+                </div>
+              </div>
+              <iframe
+                className="side-video"
+                src="https://www.youtube.com/embed/j1u_uvCwv5g"
+                allow="autoplay; encrypted-media; fullscreen">
+              </iframe>
+          </div>
+
         </div>
 
 
