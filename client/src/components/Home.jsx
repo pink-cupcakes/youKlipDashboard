@@ -15,11 +15,7 @@ class Home extends Component {
 
         <FeedBar />
 
-
-        <div className="all-side-videos">
-          <Video />
-
-        </div>
+        <Video />
 
 
       </div>

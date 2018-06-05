@@ -1,23 +1,53 @@
-.side-video-holder {
+
+.all-videos {
   display: flex;
-  flex-direction: column-reverse;
-  margin-bottom: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 
-.side-video-userimg {
+.video-holder {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 210px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.video-holder > img {
+  width: 210px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.video-title {
+  font-size: 1em;
+  font-family: GOTHAM-BOLD;
+  font-family: gotham-extra-narrow-bold;
+  font-family: gotham-narrow-black;
+  color: var(--black);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.video-userimg {
   display: hidden;
 }
 
-.side-video-description {
+.video-description {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.side-video {
-  height: var(--side-video-height);
-  width: var(--side-video-width);
-  margin-left: 4px;
-  margin-bottom: 5px;
-  transition: .5s;
+.video-username-game > h2, h3 {
+  font-size: .75em;
+  font-family: gotham-rounded-medium;
+  cursor: pointer;
+  color: var(--color-light-gray);
+}
+
+.video-username-game > h2 {
+  margin-bottom: 2px;
 }

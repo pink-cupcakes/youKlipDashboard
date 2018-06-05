@@ -1,8 +1,6 @@
 :root {
   --main-video-width: 80vw;
   --main-video-height: 40vh;
-  --side-video-height: 118px;
-  --side-video-width: 210px;
 }
 
 .home {
@@ -15,15 +13,4 @@
   font-size: 1.5em;
   font-family: GOTHAM-BLACK;
   margin-bottom: 15px;
-}
-
-
-
-
-.all-side-videos {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  flex-wrap: wrap;
-  width: calc(var(--main-video-height)*1/0.56);
 }
