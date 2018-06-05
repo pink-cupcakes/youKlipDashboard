@@ -1,0 +1,23 @@
+.side-video-holder {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 30px;
+}
+
+.side-video-userimg {
+  display: hidden;
+}
+
+.side-video-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.side-video {
+  height: var(--side-video-height);
+  width: var(--side-video-width);
+  margin-left: 4px;
+  margin-bottom: 5px;
+  transition: .5s;
+}

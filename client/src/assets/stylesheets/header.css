@@ -1,29 +1,31 @@
 :root {
-  --nav-height: 52px;
+  --header-height: 70px;
 }
 
 .header-all {
-  /* display: none; */
+  /* background: var(--color-black); */
 }
 
 .header {
-  position: fixed;
   width: 100%;
+  position: fixed;
   background: var(--color-black);
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .header > * {
-  margin: 0 0.1rem;
+  margin: 0 0.2rem;
   font-family: gotham-light;
 }
 
 .header-displacer {
-  height: var(--nav-height);
+  height: var(--header-height);
 }
+
 
 .header-logo {
   width: 2rem;

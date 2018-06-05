@@ -10,6 +10,7 @@ class Header extends Component {
   render() {
     return (
       <div className="header-all">
+
         <div className="header">
           <div className="header-left">
             <Link to="/">
@@ -21,7 +22,6 @@ class Header extends Component {
             <Link to="/"> <i className="fas fa-ellipsis-h"></i> </Link>
           </div>
           <Search />
-
           <div className="header-right">
             <div className="header-video-icon">
               <i className="fas fa-video">
@@ -35,8 +35,10 @@ class Header extends Component {
             <button>Sign up</button>
         </div>
         </div>
-        <div className="header-displacer" />
-      </div>
+
+        <div className="header-displacer"></div>
+
+    </div>
     );
   }
 }
