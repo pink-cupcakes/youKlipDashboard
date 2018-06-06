@@ -10,10 +10,17 @@
   --color-lightest-gray: #f1f1f1;
   --color-black: #090c15;
   --color-notification-black: #1f1e1f;
+
+  --max-width: 1300px;
 }
 
 @font-face {
   font-family: gotham-black;
+  src: url('../font/GOTHAM-MEDIUM.TTF');
+}
+
+@font-face {
+  font-family: gotham-medium;
   src: url('../font/GOTHAM-BLACK.TTF');
 }
 
@@ -35,6 +42,11 @@
 @font-face {
   font-family: gotham-narrow-black;
   src: url('../font/GothamNarrow-Black.otf');
+}
+
+@font-face {
+  font-family: gotham-narrow-medium;
+  src: url('../font/GothamNarrow-Medium.otf');
 }
 
 @font-face {

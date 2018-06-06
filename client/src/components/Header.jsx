@@ -12,31 +12,34 @@ class Header extends Component {
       <div className="header-all">
 
         <div className="header">
-          <div className="header-left">
-            <Link to="/">
-              <img className="header-logo" src={logoShort} alt="header-logo" />
-            </Link>
-            <Link to="/"> Browse </Link>
-            <Link to="/"> Get Desktop </Link>
-            <Link to="/"> Store </Link>
-            <Link to="/"> <i className="fas fa-ellipsis-h"></i> </Link>
-          </div>
-          <Search />
-          <div className="header-right">
-            <div className="header-video-icon">
-              <i className="fas fa-video">
-                <div className="plus-absolute">
-                  <i className="fas fa-plus plus-overlap"></i>
-                </div>
-              </i>
+          <div className="header-inner-wrapper">
+            <div className="header-left">
+              <Link to="/">
+                <img className="header-logo" src={logoShort} alt="header-logo" />
+              </Link>
+              <Link to="/"> Browse </Link>
+              <Link to="/"> Get Desktop </Link>
+              <Link to="/"> Store </Link>
+              <Link to="/"> <i className="fas fa-ellipsis-h"></i> </Link>
             </div>
-            <i className="fas fa-bell"></i>
-            <button>Log in</button>
-            <button>Sign up</button>
-        </div>
+            <Search />
+            <div className="header-right">
+              <div className="header-video-icon">
+                <i className="fas fa-video">
+                  <div className="plus-absolute">
+                    <i className="fas fa-plus plus-overlap"></i>
+                  </div>
+                </i>
+              </div>
+              <i className="fas fa-bell"></i>
+              <button>Log in</button>
+              <button>Sign up</button>
+            </div>
+
+          </div>
         </div>
 
-        <div className="header-displacer"></div>
+      <div className="header-displacer"></div>
 
     </div>
     );

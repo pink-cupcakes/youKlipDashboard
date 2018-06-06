@@ -19,7 +19,7 @@ class App extends Component {
           <Notifications />
           <Header />
           <Route exact path="/home" component={Home} />
-          <Home />
+
           <Route exact path="/login" component={Login} />
 
           <Footer />
