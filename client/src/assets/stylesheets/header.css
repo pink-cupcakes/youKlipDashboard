@@ -1,0 +1,90 @@
+:root {
+  --header-height: 70px;
+}
+
+
+.header {
+  width: 100%;
+  position: fixed;
+  background: var(--color-black);
+}
+
+.header-inner-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.header-inner-wrapper > * {
+  margin: 0 0.2rem;
+  font-family: gotham-light;
+}
+
+.header-displacer {
+  height: var(--header-height);
+}
+
+
+/* header left */
+.header-logo {
+  width: 2rem;
+  padding-right: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+.header-left > * {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-off-white);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-left > *:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-lightest-gray);
+}
+
+
+/* header right */
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.2em;
+}
+.header-right > * {
+  margin: .3em .5em;
+  color: var(--color-off-white);
+}
+.plus-absolute{
+  position: absolute;
+}
+.plus-overlap {
+  font-size: .5em;
+  position: relative;
+  top: -2.307em;
+  left: .29em;
+  color: var(--color-black);
+}
+.header-right > button {
+  padding: .5em .5em;
+  background: var(--color-darker-orange);
+  border-radius: 2px;
+  white-space: nowrap;
+  color: var(--color-off-white);
+  transition: 0.3s;
+}
+.header-right > button > h2 {
+  display: block;
+}
+.header-right > button:hover {
+  background: var(--color-orange);
+}

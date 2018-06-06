@@ -1,0 +1,26 @@
+.search-all {
+  display: flex;
+  flex-direction: row;
+  border: .5px solid var(--color-lighter-gray);
+  border-radius: 2px;
+  min-width: 150px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.search {
+  width: 100%;
+  background: white;
+  color: black;
+  border-radius: 2px 0 0 2px;
+  padding: .4rem .6rem;
+  border: none;
+}
+
+.search-all > button {
+  padding: 0 1em;
+  color: var(--color-off-white);
+  background: var(--color-gray);
+  border-radius: 0 2px 2px 0;
+  border-left: .75px solid var(--color-lighter-gray);
+}

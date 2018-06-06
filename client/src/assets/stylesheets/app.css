@@ -1,0 +1,69 @@
+:root {
+  --color-orange: #f9643a;
+  --color-light-orange: #fc9049;
+  --color-darker-orange: #fa7a3b;
+  --color-off-white: #fffaf8;
+  --color-smoky-white: #f1f1f1;
+  --color-gray: #404550;
+  --color-light-gray: #585b66;
+  --color-lighter-gray: #b7b8bb;
+  --color-lightest-gray: #f1f1f1;
+  --color-black: #090c15;
+  --color-notification-black: #1f1e1f;
+
+  --max-width: 1300px;
+}
+
+@font-face {
+  font-family: gotham-black;
+  src: url('../font/GOTHAM-MEDIUM.TTF');
+}
+
+@font-face {
+  font-family: gotham-medium;
+  src: url('../font/GOTHAM-BLACK.TTF');
+}
+
+@font-face {
+  font-family: gotham-light;
+  src: url('../font/GOTHAM-LIGHT.TTF');
+}
+
+@font-face {
+  font-family: gotham-bold;
+  src: url('../font/GOTHAM-BOLD.TTF');
+}
+
+@font-face {
+  font-family: gotham-rounded-medium;
+  src: url('../font/gotham-rounded-medium.otf');
+}
+
+@font-face {
+  font-family: gotham-narrow-black;
+  src: url('../font/GothamNarrow-Black.otf');
+}
+
+@font-face {
+  font-family: gotham-narrow-medium;
+  src: url('../font/GothamNarrow-Medium.otf');
+}
+
+@font-face {
+  font-family: gotham-extra-narrow-bold;
+  src: url('../font/gotham-extra-narrow-bold.otf');
+}
+
+
+
+html,
+body,
+#root,
+.app {
+  width: 100%;
+  height: 100%;
+  font-family: gotham-light;
+}
+
+button {
+}

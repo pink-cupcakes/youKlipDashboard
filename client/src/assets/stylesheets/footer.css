@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--color-light-orange);
+
+  padding: 2em .5em;
+  font-size: .7em;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer > * {
+  padding: 0px 5px;
+  text-decoration: none;
+}

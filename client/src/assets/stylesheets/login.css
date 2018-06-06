@@ -1,0 +1,101 @@
+.login-background-img {
+  height: 100%;
+  width: 100%;
+  background: url(../images/pubg.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 220%;
+}
+
+.login-background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgb(242, 177, 126, 0.2) 50%,
+    rgb(32, 32, 38, 1) 57%
+  );
+
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-title {
+  font-family: GOTHAM-BLACK;
+  color: #ffffff;
+  width: 80%;
+}
+
+.login-title > h1 {
+  font-size: 2em;
+  margin-bottom: 0.25em;
+}
+.login-title > h2 {
+  font-size: 1em;
+  font-family: GOTHAM-LIGHT;
+}
+
+.login-button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-button {
+  border-radius: 1px;
+  color: #ffffff;
+  margin-top: 0.75em;
+  width: 80%;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.login-button > * {
+  padding: 0.75em 0;
+}
+.login-icon {
+  width: 11%;
+}
+.login-button-text {
+  width: 89%;
+}
+
+.google-icon {
+  background: #ad1a08;
+}
+.google {
+  background: #dd4b39;
+}
+.facebook-icon {
+  background: #5c82d2;
+}
+.facebook {
+  background: #3b5998;
+}
+.email {
+  background: rgb(33, 33, 39, 0.5);
+}
+.email-icon {
+  background: rgb(33, 33, 39, 0.7);
+}
+
+.register-holder {
+  height: 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.register {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
