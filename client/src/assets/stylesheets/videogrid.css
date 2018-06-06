@@ -5,8 +5,7 @@
 .home-video-grid {
   display: grid;
   grid-gap: 3px;
-  grid-template-columns: repeat(auto-fit, minmax(var(--video-width), 1fr));
-  grid-template-rows: auto;
+  grid-template: auto / repeat(auto-fit, minmax(var(--video-width), 1fr));
 }
 
 .video-grid-item > * {
@@ -15,22 +14,19 @@
 
 .video-grid-img {
   width: 100%;
-  max-width: 420px;
   min-width: var(--video-width);
   margin-bottom: 8px;
 }
 
 .video-grid-title {
-  width: 95%;
-  font-family: gotham-narrow-black;
-  font-family: gotham-medium;
+  width: 97%;
   font-family: gotham-narrow-medium;
-  font-size: 0.9em;
   color: var(--color-black);
-  margin-bottom: 8px;
+  font-size: 0.9em;
   line-height: 1.1em;
   max-height: 2.1em;
   overflow: hidden;
+  margin-bottom: 8px;
 }
 
 .video-grid-username, .video-grid-playing {
@@ -44,7 +40,7 @@
 }
 
 .video-grid-playing {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .video-grid-game {

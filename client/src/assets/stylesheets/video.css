@@ -22,15 +22,15 @@
 }
 
 .video-title {
-  font-family: gotham-narrow-black;
-  font-size: 1em;
-  color: var(--black);
-  cursor: pointer;
+  width: 97%;
+  font-family: gotham-narrow-medium;
+  color: var(--color-black);
+  font-size: 0.9em;
+  line-height: 1.1em;
+  max-height: 2.1em;
+  overflow: hidden;
   margin-bottom: 8px;
-}
-
-.video-userimg {
-  display: hidden;
+  cursor: pointer;
 }
 
 .video-description {
@@ -42,10 +42,10 @@
 .video-username-game > h2, h3 {
   font-family: gotham-rounded-medium;
   font-size: 0.75em;
-  cursor: pointer;
   color: var(--color-light-gray);
+  cursor: pointer;
 }
 
 .video-username-game > h2 {
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
