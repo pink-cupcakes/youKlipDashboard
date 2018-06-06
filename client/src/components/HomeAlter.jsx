@@ -8,17 +8,17 @@ import VideoGrid from './VideoGrid';
 import '../assets/stylesheets/home.css';
 
 
-class Home extends Component {
+class HomeAlter extends Component {
   render() {
     return (
       <div className="home">
         <h1 className="home-feed-title"> FRONT PAGE </h1>
         <FeedBar />
-        <VideoGrid />
+        <Video />
 
       </div>
     );
   }
 }
 
-export default Home;
+export default HomeAlter;

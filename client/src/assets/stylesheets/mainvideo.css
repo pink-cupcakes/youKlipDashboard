@@ -1,0 +1,39 @@
+/* video holder */
+.main-video-holder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.main-video-title {
+  font-family: GOTHAM-BLACK;
+  margin-bottom: 5px;
+}
+
+.main-video-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0px 0 8px 0;
+}
+
+.main-video-userimg {
+  width: 40px;
+  height: 40px;
+  background: var(--color-light-orange);
+  margin-right: 10px;
+}
+
+.main-video {
+  height: var(--main-video-height);
+  width: calc(var(--main-video-height)*1/0.56);
+}
+
+/* add media query and change to width depending
+on what's smaller */
+/* .main-video {
+width: var(--main-video-width);
+height: calc(var(--main-video-width) * 0.56);
+} */

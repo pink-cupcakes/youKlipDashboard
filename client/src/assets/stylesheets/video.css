@@ -1,0 +1,51 @@
+
+.all-videos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.video-holder {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: var(--video-width);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.video-holder > img {
+  width: var(--video-width);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.video-title {
+  width: 97%;
+  font-family: gotham-narrow-medium;
+  color: var(--color-black);
+  font-size: 0.9em;
+  line-height: 1.1em;
+  max-height: 2.1em;
+  overflow: hidden;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.video-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.video-username-game > h2, h3 {
+  font-family: gotham-rounded-medium;
+  font-size: 0.75em;
+  color: var(--color-light-gray);
+  cursor: pointer;
+}
+
+.video-username-game > h2 {
+  margin-bottom: 4px;
+}

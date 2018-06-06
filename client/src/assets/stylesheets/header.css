@@ -1,30 +1,35 @@
 :root {
-  --nav-height: 52px;
+  --header-height: 70px;
 }
 
-.header-all {
-  /* display: none; */
-}
 
 .header {
-  position: fixed;
   width: 100%;
+  position: fixed;
   background: var(--color-black);
+}
+
+.header-inner-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-.header > * {
-  margin: 0 0.1rem;
+.header-inner-wrapper > * {
+  margin: 0 0.2rem;
   font-family: gotham-light;
 }
 
 .header-displacer {
-  height: var(--nav-height);
+  height: var(--header-height);
 }
 
+
+/* header left */
 .header-logo {
   width: 2rem;
   padding-right: 0;
@@ -36,18 +41,22 @@
 }
 .header-left > * {
   padding: 0.5rem;
-  /* margin: 0 0.5rem; */
   font-size: 0.75rem;
   color: var(--color-off-white);
   text-decoration: none;
   white-space: nowrap;
 }
 
+.header-left > *:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-lightest-gray);
+}
 
+
+/* header right */
 .header-right {
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
   align-items: center;
   font-size: 1.2em;
 }
@@ -71,7 +80,11 @@
   border-radius: 2px;
   white-space: nowrap;
   color: var(--color-off-white);
+  transition: 0.3s;
 }
 .header-right > button > h2 {
   display: block;
+}
+.header-right > button:hover {
+  background: var(--color-orange);
 }

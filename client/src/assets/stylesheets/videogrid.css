@@ -1,0 +1,53 @@
+:root {
+  --video-width: 210px;
+}
+
+.home-video-grid {
+  display: grid;
+  grid-gap: 3px;
+  grid-template: auto / repeat(auto-fit, minmax(var(--video-width), 1fr));
+}
+
+.video-grid-item > * {
+  cursor: pointer;
+}
+
+.video-grid-img {
+  width: 100%;
+  min-width: var(--video-width);
+  margin-bottom: 8px;
+}
+
+.video-grid-title {
+  width: 97%;
+  font-family: gotham-narrow-medium;
+  color: var(--color-black);
+  font-size: 0.9em;
+  line-height: 1.1em;
+  max-height: 2.1em;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.video-grid-username, .video-grid-playing {
+  font-family: gotham-rounded-medium;
+  font-size: 0.75em;
+  color: var(--color-light-gray);
+}
+
+.video-grid-username {
+  margin-bottom: 4px;
+}
+
+.video-grid-playing {
+  margin-bottom: 30px;
+}
+
+.video-grid-game {
+  color: var(--color-darker-orange);
+  color: #4052d7;
+}
+
+.video-grid-game:hover {
+  color: #4b7adf;
+}
