@@ -8,6 +8,7 @@ const passport       = require("passport");
 const twitchStrategy = require("passport-twitch").Strategy;
 const cookieParser   = require("cookie-parser");
 const cookieSession  = require("cookie-session");
+const cache          = require('memory-cache');
 const AWS            = require('aws-sdk');
 const user           = require('../database/video_data.js');
 const config         = require('./config.js');
@@ -39,21 +40,29 @@ passport.use(new twitchStrategy({
     scope: "user_read"
   },
   function(accessToken, refreshToken, profile, done) {
-    console.log(profile);
-    return done();
+    user.userLogin(profile.id, profile.username, profile.email)
+      .then((result) => {
+        return done(result);
+      })
+      .catch((err) => {
+        // console.log('error');
+        throw err;
+      })
   }
 ));
 
 app.get('/', (req, res) => {
-  // user.getUser();
-  // console.log(test);
+  // let test = user.getUser(req, res);
+  // test.then((result) => {
+  //   console.log(result);
+  // })
 });
 
 app.get("/auth/twitch", passport.authenticate("twitch"));
 app.get("/auth/twitch/callback",
   passport.authenticate("twitch", { failureRedirect: "http://localhost:3000/"}),
     function(req, res) {
-      // Successful authentication, redirect home.
+      // console.log(result);
       res.redirect(301, "http://localhost:3000/");
     }
 );
