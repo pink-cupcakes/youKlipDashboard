@@ -40,7 +40,7 @@ passport.use(new twitchStrategy({
   },
   function(accessToken, refreshToken, profile, done) {
     console.log(profile);
-    return;
+    return done();
   }
 ));
 
@@ -51,12 +51,12 @@ app.get('/', (req, res) => {
 
 app.get("/auth/twitch", passport.authenticate("twitch"));
 app.get("/auth/twitch/callback",
-  passport.authenticate("twitch", { failureRedirect: url.format({pathname: "http://localhost:3000/"}) },
+  passport.authenticate("twitch", { failureRedirect: "http://localhost:3000/"}),
     function(req, res) {
       // Successful authentication, redirect home.
-      res.redirect(url.format({pathname: "http://localhost:3000/"}));
+      res.redirect(301, "http://localhost:3000/");
     }
-));
+);
 
 // let params = {
 //     InstanceIds: ['i-09c7d8998b882f858']
