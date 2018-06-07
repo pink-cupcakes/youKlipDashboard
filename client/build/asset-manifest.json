@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "main.css": "static/css/main.ea774028.css",
   "main.css.map": "static/css/main.ea774028.css.map",
   "main.js": "static/js/main.05bc103f.js",
@@ -6,5 +7,20 @@
   "static/media/GOTHAM-BLACK.TTF": "static/media/GOTHAM-BLACK.8faba3db.TTF",
   "static/media/GOTHAM-LIGHT.TTF": "static/media/GOTHAM-LIGHT.9249716e.TTF",
   "static/media/SkillShotLogo-Short-Transparent.png": "static/media/SkillShotLogo-Short-Transparent.91236ab0.png",
+=======
+  "main.css": "static/css/main.12a15242.css",
+  "main.css.map": "static/css/main.12a15242.css.map",
+  "main.js": "static/js/main.574d6fe2.js",
+  "main.js.map": "static/js/main.574d6fe2.js.map",
+  "static/media/GOTHAM-BLACK.TTF": "static/media/GOTHAM-BLACK.8faba3db.TTF",
+  "static/media/GOTHAM-BOLD.TTF": "static/media/GOTHAM-BOLD.46e967b8.TTF",
+  "static/media/GOTHAM-LIGHT.TTF": "static/media/GOTHAM-LIGHT.9249716e.TTF",
+  "static/media/GOTHAM-MEDIUM.TTF": "static/media/GOTHAM-MEDIUM.0b28710a.TTF",
+  "static/media/GothamNarrow-Black.otf": "static/media/GothamNarrow-Black.34725f69.otf",
+  "static/media/GothamNarrow-Medium.otf": "static/media/GothamNarrow-Medium.36f2880e.otf",
+  "static/media/SkillShotLogo-Short-Transparent.png": "static/media/SkillShotLogo-Short-Transparent.91236ab0.png",
+  "static/media/gotham-extra-narrow-bold.otf": "static/media/gotham-extra-narrow-bold.c8b7af89.otf",
+  "static/media/gotham-rounded-medium.otf": "static/media/gotham-rounded-medium.dffb2b80.otf",
+>>>>>>> andy
   "static/media/pubg.jpg": "static/media/pubg.046a64d0.jpg"
 }

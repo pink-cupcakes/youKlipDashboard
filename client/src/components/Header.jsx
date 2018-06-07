@@ -32,7 +32,7 @@ class Header extends Component {
                 </i>
               </div>
               <i className="fas fa-bell"></i>
-              <button>Log in</button>
+              <a href="http://localhost:5000/auth/twitch"><button>Log in</button></a>
               <button>Sign up</button>
             </div>
 

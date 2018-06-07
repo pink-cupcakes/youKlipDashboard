@@ -8,6 +8,7 @@ const getUser = (req, res, user, file) => {
           if (err) {
             return reject(err);
           };
+          console.log(result);
           return resolve(result);
         });
     });
