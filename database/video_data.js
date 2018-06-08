@@ -1,34 +1,36 @@
+import { getUser } from './user_data.js';
+
 const db = require('./index.js');
 const Promise = require('bluebird');
 
-const getUser = (id) => {
-    return new Promise((resolve, reject) => {
-      const userQuery = `SELECT username, email FROM users WHERE id = '${id}'`;
-      db.query(userQuery, (err, result) => {
-        if (err) {
-          return reject(err);
-        };
-        return resolve(result);
-      });
-    });
-}
-
-const userLogin = (userid, email, username) => {
+const getUserVideos = (userid) => {
   return new Promise((resolve, reject) => {
-    const loginQuery = `INSERT INTO users (ID, USERNAME, EMAIL)
-      SELECT * FROM (SELECT '${userid}', '${username}', '${email}') AS tmp
+    const userQuery = `SELECT video_url FROM users WHERE user_id = '${id}'`;
+    db.query(userQuery, (err, result) => {
+      if (err) {
+        return reject(err);
+      };
+      return resolve(result);
+    });
+  });
+};
+
+const newUpload = (userid, url) => {
+  return new Promise((resolve, reject) => {
+    const loginQuery =
+      `INSERT INTO links (video_url, user_id)
+      SELECT * FROM (SELECT '${userid}', '${url}') AS tmp
       WHERE NOT EXISTS (
-        SELECT username FROM users WHERE ID = '${userid}'
-      ) LIMIT 1;`;
+        SELECT username FROM users WHERE video_url = '${url}' AND user_id = '${userid}'
+      ) LIMIT 1`;
     db.query(loginQuery, (err, result) => {
       if (err) {
         return reject(err);
       };
-      return resolve(getUser(userid));
+      return resolve(result);
     })
   })
-  // console.log(userid, email, username);
-}
+};
 
-module.exports.getUser = getUser;
-module.exports.userLogin = userLogin;
+module.exports.getUserVideos = getUserVideos;
+module.exports.newUpload = newUpload;

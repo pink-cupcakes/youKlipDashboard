@@ -10,7 +10,7 @@ const cookieParser   = require("cookie-parser");
 const cookieSession  = require("cookie-session");
 const cache          = require('memory-cache');
 const AWS            = require('aws-sdk');
-const user           = require('../database/video_data.js');
+const user           = require('../database/user_data.js');
 const config         = require('./config.js');
 
 const app = express();
