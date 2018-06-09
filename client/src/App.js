@@ -10,7 +10,7 @@ import Login from './components/Login';
 import Home from './components/Home';
 import HomeAlter from './components/HomeAlter';
 import Footer from './components/Footer';
-
+import Upload from './components/Upload';
 
 class App extends Component {
   render() {
@@ -22,7 +22,7 @@ class App extends Component {
           <Route exact path="/home" component={Home} />
           <Route exact path="/alter" component={HomeAlter} />
           <Route exact path="/login" component={Login} />
-
+          <Route exact path="/upload" component={Upload} />
           <Footer />
         </div>
       </Router>
