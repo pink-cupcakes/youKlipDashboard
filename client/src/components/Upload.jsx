@@ -8,6 +8,8 @@ class Upload extends Component {
   render() {
     return (
       <div className="upload">
+        <div> preview </div>
+        <div> preview here </div>
         <form>
           <input type="url" placeholder="paste video link here" ></input>
           <input type="text" placeholder="Video Title" ></input>

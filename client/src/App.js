@@ -11,6 +11,7 @@ import Home from './components/Home';
 import HomeAlter from './components/HomeAlter';
 import Footer from './components/Footer';
 import Upload from './components/Upload';
+import Newsfeed from './components/Newsfeed';
 
 class App extends Component {
   render() {
@@ -19,9 +20,12 @@ class App extends Component {
         <div className="app">
           <Notifications />
           <Header />
+          <Route exact path="/login" component={Login} />
+
           <Route exact path="/home" component={Home} />
           <Route exact path="/alter" component={HomeAlter} />
-          <Route exact path="/login" component={Login} />
+
+          <Route exact path="/newsfeed" component={Newsfeed} />
           <Route exact path="/upload" component={Upload} />
           <Footer />
         </div>
