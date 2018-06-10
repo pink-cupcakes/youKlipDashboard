@@ -74,7 +74,7 @@
   left: .29em;
   color: var(--color-black);
 }
-.header-right > button {
+.header-button {
   padding: .5em .5em;
   background: var(--color-darker-orange);
   border-radius: 2px;
@@ -82,9 +82,9 @@
   color: var(--color-off-white);
   transition: 0.3s;
 }
-.header-right > button > h2 {
+.header-button > h2 {
   display: block;
 }
-.header-right > button:hover {
+.header-button:hover {
   background: var(--color-orange);
 }

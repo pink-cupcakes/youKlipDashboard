@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import FeedBar from './FeedBar';
 import MainVideo from './MainVideo';
-import Video from './Video';
+
 import VideoGrid from './VideoGrid';
 import '../assets/stylesheets/home.css';
 
@@ -14,7 +14,7 @@ class HomeAlter extends Component {
       <div className="home">
         <h1 className="home-feed-title"> FRONT PAGE </h1>
         <FeedBar />
-        <Video />
+
 
       </div>
     );
