@@ -11,6 +11,11 @@
   --color-black: #090c15;
   --color-notification-black: #1f1e1f;
 
+  --color-icon-pink: #f25267;
+  --color-icon-blue: #437dfa;
+  --color-icon-orange: #ffa500;
+  --color-icon-red: #ff0000;
+  
   --max-width: 1300px;
 }
 

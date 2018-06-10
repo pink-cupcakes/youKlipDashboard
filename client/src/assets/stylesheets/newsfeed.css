@@ -1,0 +1,5 @@
+.newsfeed {
+  margin: 25px auto;
+  width: 90%;
+  max-width: var(--max-width);
+}
