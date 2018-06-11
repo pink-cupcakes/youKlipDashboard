@@ -20,18 +20,7 @@
   overflow: hidden;
 }
 
-.video-grid-notification > .fa-eye {
-  color: var(--color-icon-blue);
-}
-.video-grid-notification > .fa-heart {
-  color: var(--color-icon-pink);
-}
-.video-grid-notification > .fa-gavel {
-  color: var(--color-icon-red);
-}
-.video-grid-notification > .fa-comment {
-  color: var(--color-icon-orange);
-}
+
 
 
 .video-grid-img {

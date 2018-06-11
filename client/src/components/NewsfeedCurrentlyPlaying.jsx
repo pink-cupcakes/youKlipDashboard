@@ -9,7 +9,7 @@ class NewsfeedCurrentlyPlaying extends Component {
     return (
       <div className="newsfeedcurrentlyplaying">
 
-        CurrentlyPlaying
+        
       </div>
     );
   }

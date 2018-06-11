@@ -6,10 +6,10 @@
 
 .newsfeed > main {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 660px 300px;
     grid-template-rows: auto;
     grid-template-areas:
-      "f f f f f f f f s s s s";
+      "f s";
 }
 
 .newsfeed-video-all {
