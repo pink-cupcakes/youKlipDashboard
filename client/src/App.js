@@ -7,11 +7,11 @@ import './assets/stylesheets/app.css';
 import Notifications from './components/Notifications';
 import Header from './components/Header';
 import Login from './components/Login';
+import Login2 from './components/Login2';
+import Newsfeed from './components/Newsfeed';
 import Home from './components/Home';
-import HomeAlter from './components/HomeAlter';
 import Footer from './components/Footer';
 import Upload from './components/Upload';
-import Newsfeed from './components/Newsfeed';
 
 class App extends Component {
   render() {
@@ -20,13 +20,12 @@ class App extends Component {
         <div className="app">
           <Notifications />
           <Header />
-          <Route exact path="/login" component={Login} />
 
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/alter" component={HomeAlter} />
-
+          <Route exact path="/login" component={Login2} />
           <Route exact path="/newsfeed" component={Newsfeed} />
+          <Route exact path="/home" component={Home} />
           <Route exact path="/upload" component={Upload} />
+
           <Footer />
         </div>
       </Router>

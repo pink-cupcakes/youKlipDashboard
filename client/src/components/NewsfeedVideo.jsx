@@ -21,12 +21,14 @@ class NewsfeedVideo extends Component {
           </iframe>
           <div className="nf-item-title">Sion + Lifeline ARAM LOL</div>
           <div className="nf-item-view"> 865 views </div>
-          <div className="nf-item-tup"> <i className="fas fa-thumbs-up"></i> 280 </div>
-          <div className="nf-item-tdown"> <i className="fas fa-thumbs-down"></i> 15 </div>
+            <div className="nf-item-nottroll"> <i className="fas fa-smile"></i> 27 </div>
+            <div className="nf-item-troll"> <i className="fas fa-frown"></i> 2 </div>
+            <div className="nf-item-tup"> <i className="fas fa-thumbs-up"></i> 90 </div>
+            <div className="nf-item-tdown"> <i className="fas fa-thumbs-down"></i> 15 </div>
           <div className="nf-item-username-playing">
-          <h2 className="nf-item-username">Charm </h2>
-          <h3 className="nf-item-playing">playing </h3>
-          <span className="nf-item-game"> League of Legends </span>
+            <h2 className="nf-item-username">Charm </h2>
+            <h3 className="nf-item-playing">playing </h3>
+            <span className="nf-item-game"> League of Legends </span>
           </div>
           <div className="nf-comment-box"> Add a public comment ... </div>
         </div>
@@ -42,6 +44,8 @@ class NewsfeedVideo extends Component {
           </iframe>
           <div className="nf-item-title">My current gold experience</div>
           <div className="nf-item-view"> 920 views </div>
+          <div className="nf-item-nottroll"> <i className="fas fa-smile"></i> 8 </div>
+          <div className="nf-item-troll"> <i className="fas fa-frown"></i> 0 </div>
           <div className="nf-item-tup"> <i className="fas fa-thumbs-up"></i> 74 </div>
           <div className="nf-item-tdown"> <i className="fas fa-thumbs-down"></i> 29 </div>
           <div className="nf-item-username-playing">

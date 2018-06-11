@@ -1,0 +1,150 @@
+.login {
+  background: var(--color-lighter4-gray);
+  height: 100%;
+}
+
+.login-card {
+  background: white;
+  border-radius: 5px;
+  margin: 100px auto;
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+/* login left */
+.login-left {
+  width: 100%;
+  border-radius: 5px 0px 0px 5px;
+  max-width: 300px;
+  padding: 50px;
+  background: var(--color-black);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-logo {
+  width: 100%;
+  max-width: 200px;
+}
+
+.login-com-name {
+  font-size: 2em;
+  font-family: gotham-medium;
+  color: var(--color-orange);
+  font-style: italic;
+  position: relative;
+  top: -30px;
+}
+
+.login-slogan {
+  width: 90%;
+  text-align
+  : center;
+  padding-bottom: 50px;
+}
+
+
+/* login right */
+.login-right {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* font-family: gotham-rounded-medium; */
+}
+
+.login-title {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5em;
+  font-family: gotham-medium;
+}
+
+.login-sign-up {
+  border: none;
+  text-decoration: none;
+  color: var(--color-lighter-gray);
+  margin-bottom: 60px;
+  margin-right: 7px;
+
+  /* display: flex; */
+  /* flex-direction: row; */
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.login-inputs-left {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--color-lighter3-gray);
+
+  width: 100%;
+  max-width: 400px;
+  padding-right: 30px;
+}
+
+.login-inputs-left > input {
+  /* width: 90%; */
+  padding: 5px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--color-lighter-gray);
+  font-size: 1em;
+  font-family: gotham-rounded-medium;
+
+}
+
+.login-button {
+  font-family: gotham-rounded-medium;
+  font-size: 1em;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.email-button {
+  background: var(--color-light-orange);
+  margin-top: 15px;
+}
+
+.login-inputs-right {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.login-inputs-right > .login-button {
+  justify-content: start;
+  color: white;
+}
+
+.login-button :first-child {
+  padding: 0 15px;
+}
+
+.google {
+  background: #f73c39;
+}
+
+.facebook {
+ background: #4167b2;
+}
+
+.discord {
+  background: #7289da;
+}

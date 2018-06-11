@@ -22,7 +22,7 @@
     "ni d d d d d d d d d d d"
     "v v v v v v v v v v v v"
     "t t t t t t t t t t t t"
-    "vc vc vc vc vc vc . . tu tu td td"
+    "vc vc vc vc vc vc . . nt tr tu td"
     "up up up up up up up up up up up up"
     "c c c c c c c c c c c c";
     margin-bottom: 40px;
@@ -70,9 +70,20 @@
   margin: 0 0px 5px 10px;
 }
 
+.nf-item-nottroll {
+  grid-area: nt;
+  color: var(--color-light-gray);
+}
+
+.nf-item-troll {
+  grid-area: tr;
+  color: var(--color-light-gray);
+}
+
 .nf-item-tup {
   grid-area: tu;
   color: var(--color-light-gray);
+  /* margin-left: 10px; */
 }
 
 .nf-item-tdown {
