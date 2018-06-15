@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import Search from './Search';
 
 import '../assets/stylesheets/header.css';
 import logoShort from '../assets/vector/SkillShotLogo-Short-Transparent.png';
 
-class Header extends Component {
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  getVideos() {
+    // axios.get('http://localhost:5000/user_videos', {'params': {'username': 'andy', 'email': 'chaochaoqi@gmail.com'}})
+    axios.get('http://localhost:5000/auth/twitch')
+  }
+  
   render() {
     return (
       <div className="header-all">
@@ -32,7 +43,7 @@ class Header extends Component {
                 </i>
               </div>
               <i className="fas fa-bell"></i>
-              <a href="http://localhost:5000/auth/twitch"><button>Log in</button></a>
+              <button onClick={this.getVideos()}>Log in</button>
               <button>Sign up</button>
             </div>
 

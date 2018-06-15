@@ -1,17 +1,18 @@
-const express        = require('express');
-const request        = require('request');
-const bodyParser     = require('body-parser');
-const axios          = require('axios');
-const url            = require('url');
-const cors           = require('cors');
-const passport       = require("passport");
-const twitchStrategy = require("passport-twitch").Strategy;
-const cookieParser   = require("cookie-parser");
-const cookieSession  = require("cookie-session");
-const cache          = require('memory-cache');
-const AWS            = require('aws-sdk');
-const user           = require('../database/user_data.js');
-const config         = require('./config.js');
+const express                      = require('express');
+const request                      = require('request');
+const bodyParser                   = require('body-parser');
+const axios                        = require('axios');
+const url                          = require('url');
+const cors                         = require('cors');
+const passport                     = require("passport");
+const twitchStrategy               = require("passport-twitch").Strategy;
+const cookieParser                 = require("cookie-parser");
+const cookieSession                = require("cookie-session");
+const cache                        = require('memory-cache');
+const AWS                          = require('aws-sdk');
+const { userLogin }                = require('../database/user_data.js');
+const { getUserVideos, newUpload } = require('../database/video_data.js');
+const config                       = require('./config.js');
 
 const app = express();
 
@@ -35,37 +36,51 @@ let ec2 = new AWS.EC2({ apiVersion: '2016-11-15' });
 passport.use(new twitchStrategy({
     clientID: config.twitchID,
     clientSecret: config.twitchSecret,
-    /*to be updated*/
     callbackURL: "http://localhost:5000/auth/twitch/callback",
     scope: "user_read"
   },
-  function(accessToken, refreshToken, profile, done) {
-    user.userLogin(profile.id, profile.username, profile.email)
+  function(accessToken, refreshToken, profile, next) {
+    userLogin(profile.id, profile.username, profile.email)
       .then((result) => {
-        return done(result);
+        return next(null, result);
       })
       .catch((err) => {
-        // console.log('error');
-        throw err;
+        return next(err, null);
       })
   }
 ));
 
-app.get('/', (req, res) => {
-  // let test = user.getUser(req, res);
-  // test.then((result) => {
-  //   console.log(result);
-  // })
+passport.serializeUser(function(user, done) {
+  done(null, user);
 });
+
+passport.deserializeUser(function(user, done) {
+  done(null, user);
+});
+
+app.get('/', (req, res) => {});
 
 app.get("/auth/twitch", passport.authenticate("twitch"));
 app.get("/auth/twitch/callback",
   passport.authenticate("twitch", { failureRedirect: "http://localhost:3000/"}),
     function(req, res) {
-      // console.log(result);
-      res.redirect(301, "http://localhost:3000/");
+      let user = req.user[0]
+      res.redirect(url.format({
+        pathname:"http://localhost:3000/",
+        query: {
+          'username': user.username,
+          'email': user.email
+        }
+      }));
     }
 );
+
+app.get("/user_videos", (req, res) => {
+  res.redirect(url.format({
+    pathname:"http://localhost:3000/"
+  }))
+  // getUserVideos()
+})
 
 // let params = {
 //     InstanceIds: ['i-09c7d8998b882f858']

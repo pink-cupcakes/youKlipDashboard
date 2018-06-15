@@ -13,7 +13,7 @@ const getUser = (id) => {
     });
 }
 
-const userLogin = (userid, email, username) => {
+const userLogin = (userid, username, email) => {
   return new Promise((resolve, reject) => {
     const loginQuery =
       `INSERT INTO users (ID, USERNAME, EMAIL)
@@ -25,7 +25,14 @@ const userLogin = (userid, email, username) => {
       if (err) {
         return reject(err);
       };
-      return resolve(getUser(userid));
+      console.log(result);
+      getUser(userid)
+        .then((result) => {
+          return resolve(result);
+        })
+        .catch((err) => {
+          console.log(err);
+        })
     })
   })
 }
