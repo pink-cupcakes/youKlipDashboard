@@ -1,0 +1,63 @@
+.newsfeedstories {
+  border: 1px solid var(--color-lightest-gray);
+  border-radius: 2px;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.stories-title {
+  font-family: gotham-rounded-medium;
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 10px;
+}
+
+.stories-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid template-rows: 1fr 1fr;
+  grid-template-areas:
+    "img name"
+    "img time";
+  margin: 0px 0px 10px 0px;
+}
+
+.stories-item > * {
+  font-family: gotham-rounded-medium;
+}
+
+.stories-item-userimg {
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  grid-area: img;
+}
+
+.add-stories-img {
+  border: 2px solid var(--color-orange);
+  background: white;
+  box-sizing: border-box;
+  color: var(--color-orange);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stories-item-username {
+  grid-area: name;
+  align-self: end;
+  color: var(--color-black);
+  font-size: .8em;
+  font-weight: 700;
+  /* justify-self: start; */
+}
+
+.stories-item-time {
+  grid-area: time;
+  color: var(--color-light-gray);
+  font-size: 0.75em;
+  /* font-weight: 200; */
+  /* justify-self: start; */
+}

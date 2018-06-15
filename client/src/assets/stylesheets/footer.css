@@ -9,6 +9,8 @@
   font-size: .7em;
   width: 100%;
   box-sizing: border-box;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 .footer > * {

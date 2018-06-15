@@ -1,0 +1,116 @@
+:root {
+  --nf-max-width: 600px;
+
+  --nf-video-height: 37vh;
+  --nf-video-width: 20vw;
+}
+
+.newsfeed-video-all {
+  width: 100%;
+  max-width: var(--nf-max-width);
+}
+
+.nf-item {
+  /* padding: 10px 0px; */
+  border: 1px solid var(--color-lightest-gray);
+  border-radius: 2px;
+  min-width: calc(var(--nf-video-height)*1/0.56);
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "ni n n n n n n n n n n n"
+    "ni d d d d d d d d d d d"
+    "v v v v v v v v v v v v"
+    "t t t t t t t t t t t t"
+    "vc vc vc vc vc vc . . nt tr tu td"
+    "up up up up up up up up up up up up"
+    "c c c c c c c c c c c c";
+    margin-bottom: 40px;
+}
+
+.nf-item > * {
+  font-family: gotham-rounded-medium;
+  font-size: 0.9em;
+}
+
+.nf-item-notification-userimg {
+  grid-area: ni;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  margin: 10px 10px 10px 10px;
+}
+
+.nf-item-notification {
+  grid-area: n;
+  align-self: end;
+}
+
+.nf-item-date {
+  grid-area:d;
+  color: var(--color-light-gray);
+}
+
+.nf-item-video {
+  grid-area: v;
+  height: var(--nf-video-height);
+  width: calc(var(--nf-video-height)*1/0.56);
+  margin-bottom: 10px;
+}
+
+.nf-item-title {
+  grid-area: t;
+  font-family: gotham-narrow-medium;
+  font-size: 1.2em;
+  margin: 0 0px 5px 10px;
+}
+
+.nf-item-view {
+  grid-area: vc;
+  margin: 0 0px 5px 10px;
+}
+
+.nf-item-nottroll {
+  grid-area: nt;
+  color: var(--color-light-gray);
+}
+
+.nf-item-troll {
+  grid-area: tr;
+  color: var(--color-light-gray);
+}
+
+.nf-item-tup {
+  grid-area: tu;
+  color: var(--color-light-gray);
+  /* margin-left: 10px; */
+}
+
+.nf-item-tdown {
+  grid-area: td;
+  color: var(--color-light-gray);
+}
+
+.nf-item-username-playing {
+  grid-area: up;
+  display: flex;
+  flex-direction: row;
+}
+
+.nf-item-username-playing > * {
+  margin-right: 5px;
+}
+
+.nf-item-username {
+  margin: 0px 5px 10px 10px;
+}
+
+
+.nf-comment-box {
+  grid-area: c;
+  margin-left: 10px;
+  padding: 14px 0px;
+  width: 95%;
+  color: var(--color-lighter2-gray);
+  border-top: 0.5px solid var(--color-lighter3-gray);
+}

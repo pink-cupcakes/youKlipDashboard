@@ -1,0 +1,23 @@
+.newsfeed {
+  margin: 25px auto;
+  width: 90%;
+  max-width: var(--max-width);
+}
+
+.newsfeed > main {
+    display: grid;
+    grid-template-columns: 660px 300px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "f s";
+}
+
+.newsfeed-video-all {
+  grid-area: f;
+}
+
+.newsfeed-side-right {
+  grid-area: s;
+  display: flex;
+  flex-direction: column;
+}

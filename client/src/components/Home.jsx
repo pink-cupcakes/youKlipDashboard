@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import FeedBar from './FeedBar';
-import MainVideo from './MainVideo';
-import Video from './Video';
+
 import VideoGrid from './VideoGrid';
 import '../assets/stylesheets/home.css';
 

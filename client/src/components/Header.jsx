@@ -29,7 +29,7 @@ class Header extends React.Component {
                 <img className="header-logo" src={logoShort} alt="header-logo" />
               </Link>
               <Link to="/"> Browse </Link>
-              <Link to="/"> Get Desktop </Link>
+              <Link to="/"> Front Page </Link>
               <Link to="/"> Store </Link>
               <Link to="/"> <i className="fas fa-ellipsis-h"></i> </Link>
             </div>
@@ -43,8 +43,8 @@ class Header extends React.Component {
                 </i>
               </div>
               <i className="fas fa-bell"></i>
-              <button onClick={this.getVideos()}>Log in</button>
-              <button>Sign up</button>
+              <a href="http://localhost:5000/auth/twitch"><button className="header-button">Log in</button></a>
+              <a href="http://localhost:5000/auth/twitch"><button className="header-button">Sign up</button></a>
             </div>
 
           </div>

@@ -7,9 +7,17 @@
   --color-gray: #404550;
   --color-light-gray: #585b66;
   --color-lighter-gray: #b7b8bb;
+  --color-lighter2-gray: #afadad;
+  --color-lighter3-gray: #bfbfbf;
+  --color-lighter4-gray: #d8d8d8;
   --color-lightest-gray: #f1f1f1;
   --color-black: #090c15;
   --color-notification-black: #1f1e1f;
+
+  --color-icon-pink: #f25267;
+  --color-icon-blue: #437dfa;
+  --color-icon-orange: #ffa500;
+  --color-icon-red: #ff0000;
 
   --max-width: 1300px;
 }
@@ -63,7 +71,40 @@ body,
   width: 100%;
   height: 100%;
   font-family: gotham-light;
+  color: var(--color-black);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  border: none;
+  padding: none;
+  margin: none;
 }
 
 button {
+  /* background: none; */
+}
+
+::placeholder {
+  font-family: gotham-rounded-medium;
+  font-size: 1.2em;
+}
+
+.fa-heart {
+  color: var(--color-icon-pink);
+}
+.fa-eye {
+  color: var(--color-icon-blue);
+}
+.fa-gavel {
+  color: var(--color-icon-red);
+}
+.fa-comment {
+  color: var(--color-icon-orange);
 }
