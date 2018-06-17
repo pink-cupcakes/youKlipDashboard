@@ -3,7 +3,7 @@ const Promise = require('bluebird');
 
 const getUser = (id) => {
     return new Promise((resolve, reject) => {
-      const userQuery = `SELECT username, email FROM users WHERE id = '${id}'`;
+      const userQuery = `SELECT id, username, email FROM users WHERE id = '${id}'`;
       db.query(userQuery, (err, result) => {
         if (err) {
           return reject(err);
@@ -25,7 +25,6 @@ const userLogin = (userid, username, email) => {
       if (err) {
         return reject(err);
       };
-      console.log(result);
       getUser(userid)
         .then((result) => {
           return resolve(result);

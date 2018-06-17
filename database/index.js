@@ -10,7 +10,7 @@ var dbPool = mysql.createPool({
 });
 
 dbPool.getConnection(function(err, connection) {
-    if (err) { console.error(err); }
-  })
-  
-  module.exports = dbPool;
+  if (err) { console.error(err); }
+});
+
+module.exports = dbPool;

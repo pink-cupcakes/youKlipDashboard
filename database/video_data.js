@@ -1,9 +1,9 @@
 const db = require('./index.js');
 const Promise = require('bluebird');
 
-const getUserVideos = (userid) => {
+const getUserVideos = (id) => {
   return new Promise((resolve, reject) => {
-    const userQuery = `SELECT video_url FROM users WHERE user_id = '${id}'`;
+    const userQuery = `SELECT video_url FROM links WHERE user_id = '${id}'`;
     db.query(userQuery, (err, result) => {
       if (err) {
         return reject(err);
@@ -19,7 +19,7 @@ const newUpload = (userid, url) => {
       `INSERT INTO links (video_url, user_id)
       SELECT * FROM (SELECT '${userid}', '${url}') AS tmp
       WHERE NOT EXISTS (
-        SELECT * FROM users WHERE video_url = '${url}' AND user_id = '${userid}'
+        SELECT * FROM links WHERE video_url = '${url}' AND user_id = '${userid}'
       ) LIMIT 1`;
     db.query(videoQuery, (err, result) => {
       if (err) {

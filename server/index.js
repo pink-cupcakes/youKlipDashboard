@@ -66,21 +66,34 @@ app.get("/auth/twitch/callback",
     function(req, res) {
       let user = req.user[0]
       res.redirect(url.format({
-        pathname:"http://localhost:3000/",
+        pathname:"http://localhost:5000/user_videos",
         query: {
+          'id': user.id,
           'username': user.username,
-          'email': user.email
+          'email': user.email,
+          'test_url': 'https://www.youtube.com/watch?v=9bvVM3rR4Wc'
         }
       }));
     }
 );
 
 app.get("/user_videos", (req, res) => {
-  res.redirect(url.format({
-    pathname:"http://localhost:3000/"
-  }))
-  // getUserVideos()
-})
+  newUpload(req.query.test_url, req.query.id)
+    .then((result) => {
+      getUserVideos(req.query.id)
+      .then((videos) => {
+        videos = videos.map((videoURL) => {
+          return(videoURL.video_url);
+        });
+        res.redirect(url.format({
+          pathname:"http://localhost:3000/home",
+          query: {
+            'videos': JSON.stringify(videos)
+          }
+        }))
+      })
+    })
+});
 
 // let params = {
 //     InstanceIds: ['i-09c7d8998b882f858']
