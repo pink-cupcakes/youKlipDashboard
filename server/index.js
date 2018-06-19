@@ -70,30 +70,34 @@ app.get("/auth/twitch/callback",
         query: {
           'id': user.id,
           'username': user.username,
-          'email': user.email,
-          'test_url': 'https://www.youtube.com/watch?v=9bvVM3rR4Wc'
+          'email': user.email
         }
       }));
     }
 );
 
 app.get("/user_videos", (req, res) => {
-  newUpload(req.query.test_url, req.query.id)
-    .then((result) => {
-      getUserVideos(req.query.id)
-      .then((videos) => {
-        videos = videos.map((videoURL) => {
-          return(videoURL.video_url);
-        });
-        res.redirect(url.format({
-          pathname:"http://localhost:3000/home",
-          query: {
-            'videos': JSON.stringify(videos)
-          }
-        }))
-      })
-    })
+  getUserVideos(req.query.id)
+  .then((videos) => {
+    videos = videos.map((videoURL) => {
+      return(videoURL.video_url);
+    });
+    res.redirect(url.format({
+      pathname:"http://localhost:3000/home",
+      query: {
+        'videos': JSON.stringify(videos)
+      }
+    }))
+  })
 });
+
+app.post('/video_upload', (req, res) => {
+  newUpload(req.query.url, req.query.id)
+    .catch((err) => {
+      console.log(err);
+    });
+  res.send();
+})
 
 // let params = {
 //     InstanceIds: ['i-09c7d8998b882f858']

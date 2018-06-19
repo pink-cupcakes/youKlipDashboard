@@ -13,13 +13,13 @@ const getUserVideos = (id) => {
   });
 };
 
-const newUpload = (userid, url) => {
+const newUpload = (url, userid) => {
   return new Promise((resolve, reject) => {
     const videoQuery =
       `INSERT INTO links (video_url, user_id)
-      SELECT * FROM (SELECT '${userid}', '${url}') AS tmp
-      WHERE NOT EXISTS (
-        SELECT * FROM links WHERE video_url = '${url}' AND user_id = '${userid}'
+      SELECT '${url}', '${userid}' FROM links
+      WHERE NOT EXISTS (SELECT * FROM links
+        WHERE video_url='${url}' AND user_id='${userid}'
       ) LIMIT 1`;
     db.query(videoQuery, (err, result) => {
       if (err) {

@@ -16,10 +16,10 @@ const getUser = (id) => {
 const userLogin = (userid, username, email) => {
   return new Promise((resolve, reject) => {
     const loginQuery =
-      `INSERT INTO users (ID, USERNAME, EMAIL)
-      SELECT * FROM (SELECT '${userid}', '${username}', '${email}') AS tmp
-      WHERE NOT EXISTS (
-        SELECT username FROM users WHERE ID = '${userid}'
+      `INSERT INTO users (id, username, email)
+      SELECT '${userid}', '${username}', '${email}' FROM users
+      WHERE NOT EXISTS (SELECT * FROM users
+        WHERE email='${email}'
       ) LIMIT 1`;
     db.query(loginQuery, (err, result) => {
       if (err) {
