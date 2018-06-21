@@ -5,16 +5,20 @@ import '../assets/stylesheets/upload.css';
 
 
 class Upload extends Component {
+
+
   render() {
     return (
       <div className="upload">
-        <div> preview </div>
-        <div> preview here </div>
-        <form>
-          <input type="url" placeholder="paste video link here" ></input>
-          <input type="text" placeholder="Video Title" ></input>
-          <input type="text" placeholder="Body" ></input>
-          <input type="submit" value="Submit" />
+        <h3 className="upload-title"> VIDEO UPLOAD </h3>
+        <h4 className="upload-subtitle" > Upload a video to share with your friends </h4>
+        <form className="upload-form" >
+          <img  className="upload-img empty" alt="" src=""></img>
+          <p className="upload-img-subtitle" >Paste a link below</p>
+          <input className="upload-form-field" type="url" placeholder="Paste video link here" ></input>
+          <input className="upload-form-field" type="text" placeholder="Title" ></input>
+          <input className="upload-form-field" type="text" placeholder="Body" ></input>
+          <input className="upload-form-submit" type="submit" value="SUBMIT" />
         </form>
       </div>
     );
