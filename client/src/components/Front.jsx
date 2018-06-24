@@ -7,7 +7,7 @@ import VideoGrid from './VideoGrid';
 import '../assets/stylesheets/home.css';
 
 
-class Home extends Component {
+class Front extends Component {
   render() {
     return (
       <div className="home">
@@ -20,4 +20,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Front;

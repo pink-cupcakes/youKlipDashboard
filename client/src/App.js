@@ -9,7 +9,7 @@ import Header from './components/Header';
 import Login from './components/Login';
 import Login2 from './components/Login2';
 import Newsfeed from './components/Newsfeed';
-import Home from './components/Home';
+import Front from './components/Front';
 import Footer from './components/Footer';
 import Upload from './components/Upload';
 
@@ -23,7 +23,7 @@ class App extends Component {
 
           <Route exact path="/login" component={Login2} />
           <Route exact path="/newsfeed" component={Newsfeed} />
-          <Route exact path="/home" component={Home} />
+          <Route exact path="/front" component={Front} />
           <Route exact path="/upload" component={Upload} />
 
           <Footer />

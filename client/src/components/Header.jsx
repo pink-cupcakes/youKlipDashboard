@@ -17,7 +17,7 @@ class Header extends React.Component {
     // axios.get('http://localhost:5000/user_videos', {'params': {'username': 'andy', 'email': 'chaochaoqi@gmail.com'}})
     axios.get('http://localhost:5000/auth/twitch')
   }
-  
+
   render() {
     return (
       <div className="header-all">
@@ -28,9 +28,9 @@ class Header extends React.Component {
               <Link to="/">
                 <img className="header-logo" src={logoShort} alt="header-logo" />
               </Link>
-              <Link to="/"> Browse </Link>
-              <Link to="/"> Front Page </Link>
-              <Link to="/"> Store </Link>
+              <Link to="/newsfeed"> Browse </Link>
+              <Link to="/front"> Front Page </Link>
+              <Link to="/reel"> Reel Creator </Link>
               <Link to="/"> <i className="fas fa-ellipsis-h"></i> </Link>
             </div>
             <Search />
