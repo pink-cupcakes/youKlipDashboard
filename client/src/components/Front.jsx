@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import FeedBar from './FeedBar';
 
-import VideoGrid from './VideoGrid';
+import VideoGrid from './Video/VideoGrid';
 import '../assets/stylesheets/home.css';
 
 
