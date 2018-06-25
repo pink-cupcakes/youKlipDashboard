@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../../assets/stylesheets/videogrid.css';
+import '../../assets/stylesheets/video/videogrid.css';
 import VideoItem from './VideoItem';
 
 class VideoGrid extends Component {

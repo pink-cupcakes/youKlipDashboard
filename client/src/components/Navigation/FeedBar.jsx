@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/stylesheets/feedbar.css';
+import '../../assets/stylesheets/navigation/feedbar.css';
 
 
 class FeedBar extends Component {

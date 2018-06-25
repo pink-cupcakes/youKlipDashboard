@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/stylesheets/newsfeedcurrentlyplaying.css';
+import '../../assets/stylesheets/newsfeed/newsfeedcurrentlyplaying.css';
 
 
 class NewsfeedCurrentlyPlaying extends Component {
@@ -9,7 +9,7 @@ class NewsfeedCurrentlyPlaying extends Component {
     return (
       <div className="newsfeedcurrentlyplaying">
 
-        
+
       </div>
     );
   }

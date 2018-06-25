@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/stylesheets/newsfeedvideo.css';
-import storiesImg1 from '../assets/images/stories-sample1.jpeg';
-import storiesImg2 from '../assets/images/stories-sample2.jpg';
+import '../../assets/stylesheets/newsfeed/newsfeedvideo.css';
+import storiesImg1 from '../../assets/images/stories-sample1.jpeg';
+import storiesImg2 from '../../assets/images/stories-sample2.jpg';
 
 class NewsfeedVideo extends Component {
   render() {

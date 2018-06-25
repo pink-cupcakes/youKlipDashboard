@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/stylesheets/upload.css';
+import '../../assets/stylesheets/upload/upload.css';
 
 
 class Upload extends Component {

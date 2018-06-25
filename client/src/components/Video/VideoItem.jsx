@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../../assets/stylesheets/videoitem.css';
+import '../../assets/stylesheets/video/videoitem.css';
 
 
 class VideoItem extends Component {

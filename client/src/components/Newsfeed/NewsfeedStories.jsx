@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/stylesheets/newsfeedstories.css';
-import storiesImg1 from '../assets/images/stories-sample1.jpeg';
+import '../../assets/stylesheets/newsfeed/newsfeedstories.css';
+import storiesImg1 from '../../assets/images/stories-sample1.jpeg';
 
 class NewsfeedStories extends Component {
   render() {

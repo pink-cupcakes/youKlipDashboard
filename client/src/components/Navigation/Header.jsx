@@ -4,8 +4,9 @@ import axios from 'axios';
 
 import Search from './Search';
 
-import '../assets/stylesheets/header.css';
-import logoShort from '../assets/vector/SkillShotLogo-Short-Transparent.png';
+import '../../assets/stylesheets/navigation/header.css';
+import logoShort from '../../assets/vector/SkillShotLogo-Short-Transparent.png';
+
 
 class Header extends React.Component {
   constructor(props) {
@@ -28,20 +29,23 @@ class Header extends React.Component {
               <Link to="/">
                 <img className="header-logo" src={logoShort} alt="header-logo" />
               </Link>
-              <Link to="/newsfeed"> Browse </Link>
+              <Link to="/"> Browse </Link>
               <Link to="/front"> Front Page </Link>
               <Link to="/reel"> Reel Creator </Link>
               <Link to="/"> <i className="fas fa-ellipsis-h"></i> </Link>
             </div>
             <Search />
             <div className="header-right">
-              <div className="header-video-icon">
-                <i className="fas fa-video">
-                  <div className="plus-absolute">
-                    <i className="fas fa-plus plus-overlap"></i>
-                  </div>
-                </i>
-              </div>
+              <Link to="/upload">
+                <div className="header-video-icon">
+                  <i className="fas fa-video">
+                    <div className="plus-absolute">
+                      <i className="fas fa-plus plus-overlap"></i>
+                    </div>
+                  </i>
+                </div>
+              </Link>
+
               <i className="fas fa-bell"></i>
               <a href="http://localhost:5000/auth/twitch"><button className="header-button">Log in</button></a>
               <a href="http://localhost:5000/auth/twitch"><button className="header-button">Sign up</button></a>

@@ -6,7 +6,7 @@ import NewsfeedVideo from './NewsfeedVideo';
 import NewsfeedStories from './NewsfeedStories';
 import NewsfeedCurrentlyPlaying from './NewsfeedCurrentlyPlaying';
 
-import '../assets/stylesheets/newsfeed.css';
+import '../../assets/stylesheets/newsfeed/newsfeed.css';
 
 
 class Newsfeed extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../assets/stylesheets/login.css';
+import '../assets/stylesheets/login-signup/login.css';
 
 import { Link } from 'react-router-dom';
 

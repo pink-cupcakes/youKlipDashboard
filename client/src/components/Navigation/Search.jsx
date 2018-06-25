@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import '../assets/stylesheets/search.css';
+import '../../assets/stylesheets/navigation/search.css';
 
 
 class Search extends Component {

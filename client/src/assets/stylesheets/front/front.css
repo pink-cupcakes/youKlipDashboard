@@ -3,13 +3,13 @@
   --main-video-height: 40vh;
 }
 
-.home {
+.front {
   margin: 25px auto;
   width: 90%;
   max-width: var(--max-width);
 }
 
-.home-feed-title {
+.front-feed-title {
   font-size: 1.5em;
   font-family: GOTHAM-BLACK;
   margin-bottom: 15px;

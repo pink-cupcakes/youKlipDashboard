@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import '../assets/stylesheets/login2.css';
-
 import { Link } from 'react-router-dom';
-import logoShort from '../assets/vector/SkillShotLogo-Short-Transparent.png';
+
+import '../../assets/stylesheets/login-signup/login2.css';
+import logoShort from '../../assets/vector/SkillShotLogo-Short-Transparent.png';
 
 class Login2 extends Component {
   render() {
