@@ -8,7 +8,7 @@ class Splash extends Component {
   render() {
     return (
       <div className="splash">
-        <div>
+        <div className="splash-s1">
           <h1 className="splash-title"> SkillShot </h1>
           <h2 className="splash-subtitle"> A community made by and for gamers </h2>
           <img className="splash-img1" alt="img1" src={splash1} />

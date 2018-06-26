@@ -1,3 +1,33 @@
 .splash {
-  /* height: 100%; */
+
+}
+
+.splash-s1 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.splash-title {
+  grid-row: 1/2;
+  grid-column: 2/5;
+  /* justify-self: end; */
+  align-self: end;
+  z-index: 1;
+  font-size: 4em;
+  font-family: gotham-medium;
+}
+
+.splash-subtitle {
+  /* grid-area: s; */
+  grid-row: 2/-1;
+  grid-column: 2/7;
+}
+
+.splash-img1 {
+  height: 75vh;
+  /* grid-area: i; */
+  grid-row: 1/-1;
+  grid-column: 6/-1;
+
 }
