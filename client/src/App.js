@@ -6,6 +6,7 @@ import './assets/stylesheets/app.css';
 
 import Notifications from './components/Navigation/Notifications';
 import Header from './components/Navigation/Header';
+import Splash from './components/Splash/Splash';
 import Login2 from './components/LoginSignup/Login2';
 import Newsfeed from './components/Newsfeed/Newsfeed';
 import Front from './components/Front/Front';
@@ -19,8 +20,9 @@ class App extends Component {
         <div className="app">
           <Notifications />
           <Header />
+          <Route exact path="/" component={Splash} />
           <Route exact path="/login" component={Login2} />
-          <Route exact path="/" component={Newsfeed} />
+          <Route exact path="/newsfeed" component={Newsfeed} />
           <Route exact path="/front" component={Front} />
           <Route exact path="/upload" component={Upload} />
           <Footer />

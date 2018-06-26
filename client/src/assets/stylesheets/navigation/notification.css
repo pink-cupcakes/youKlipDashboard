@@ -4,7 +4,7 @@
 
 .notification {
   width: 100%;
-  background-color: #202026;
+  background-color: var(--color-black);
   position: fixed;
 }
 
@@ -18,6 +18,23 @@
 .notification-content {
   font-size: .8em;
   padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.notification-message {
+  color: white;
+}
+
+.not-x {
+  position: absolute;
+  right: 15px;
+  top: 9px;
+  font-size: 18px;
+  z-index: 2;
+}
+.not-x:hover {
+  cursor: pointer;
 }
 
 .notification-displacer {

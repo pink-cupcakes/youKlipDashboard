@@ -9,11 +9,12 @@ class Notification extends Component {
     return (
       <div className="notification-all">
         <div className="notification">
-          <Link to="/login">
             <div className="notification-content">
-              Notification: Login or Sign Up to Use the Site Fully
+              <Link to="/login">
+                <p className="notification-message"> Login or Sign Up to Use the Site Fully </p>
+              </Link>
+              <i className="fas fa-times not-x"></i>
             </div>
-          </Link>
         </div>
         <div className="notification-displacer" />
       </div>

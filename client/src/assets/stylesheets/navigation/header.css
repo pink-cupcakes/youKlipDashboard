@@ -7,7 +7,7 @@
   /* flex: 0 1 auto; */
   width: 100%;
   position: fixed;
-  background: var(--color-black);
+  background: var(--color-light-black);
 }
 
 .header-inner-wrapper {
@@ -22,7 +22,7 @@
 
 .header-inner-wrapper > * {
   margin: 0 0.2rem;
-  font-family: gotham-light;
+  font-family: gotham-medium;
 }
 
 .header-displacer {
@@ -76,12 +76,14 @@
   color: var(--color-black);
 }
 .header-button {
-  padding: .5em .5em;
+  padding: .5em 1.25em;
   background: var(--color-darker-orange);
-  border-radius: 2px;
+  border-radius: 20px;
   white-space: nowrap;
   color: var(--color-off-white);
   transition: 0.3s;
+  font-family: gotham-medium;
+  font-size: 12px;
 }
 .header-button > h2 {
   display: block;
