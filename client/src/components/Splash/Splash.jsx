@@ -9,9 +9,15 @@ class Splash extends Component {
     return (
       <div className="splash">
         <div className="splash-s1">
-          <h1 className="splash-title"> SkillShot </h1>
-          <h2 className="splash-subtitle"> A community made by and for gamers </h2>
-          <img className="splash-img1" alt="img1" src={splash1} />
+            <h1 className="splash-title st1"> SKILL </h1>
+            <h1 className="splash-title st2"> SHOT </h1>
+            <h2 className="splash-subtitle sst1"> A COMMUNITY MADE </h2>
+            <h2 className="splash-subtitle sst2"> BY AND FOR GAMERS </h2>
+            <i className="fas fa-location-arrow arrow1"></i>
+            <i className="fas fa-bomb bomb1"></i>
+            <h2 className="splash-header header1"> SHARE YOUR WORST </h2>
+            <i className="fas fa-certificate cert1"></i>
+            <h2 className="splash-header header2"> SHARE YOUR BEST </h2>
         </div>
         <div>
           <h2> Upload and share videos with your friends </h2>

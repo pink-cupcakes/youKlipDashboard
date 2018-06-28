@@ -1,39 +1,113 @@
 .splash {
-
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .splash-s1 {
+  width: 100%;
+  height: 70vh;
+  background: #0587f9;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 50px 80px 300px 80px 50px 1fr;
+  grid-template-rows: 1fr 105px 105px 30px 25px 25px 1fr;
+  overflow: hidden;
 }
 
 .splash-title {
-  grid-row: 1/2;
-  grid-column: 1/6;
-  justify-self: end;
-  align-self: end;
-  z-index: 1;
-  font-size: 4em;
-  font-family: gotham-medium;
-  padding-right: 40px;
+  font-size: 7em;
+  font-family: 'Permanent Marker', cursive;
+  font-family: 'Knewave', cursive;
+  transform: rotate(-4deg);
+  justify-self: center;
+  z-index: 2;
+  grid-column: 4/5;
+}
+
+.st1 {
+  grid-row: 2/3;
+}
+
+.st2 {
+  grid-row: 3/4;
 }
 
 .splash-subtitle {
-  /* grid-area: s; */
-  grid-row: 2/-1;
-  grid-column: 1/6;
-  justify-self: end;
-  padding-right: 40px;
-  font-size: 1.5em;
-  font-family: gotham-light;
+  grid-column: 2/7;
+  font-size: 1.75em;
+  font-family: gotham-medium;
+  font-family: 'Permanent Marker', cursive;
+  justify-self: center;
+  z-index: 2;
 }
 
-.splash-img1 {
-  height: 75vh;
-  /* grid-area: i; */
-  grid-row: 1/-1;
-  grid-column: 6/-1;
-  /* padding-top: 30px; */
+.sst1 {
+  grid-row: 5/6;
+}
 
+.sst2 {
+  grid-row: 6/7;
+}
+
+.fa-location-arrow {
+    font-size: 8em;
+}
+
+.arrow1 {
+  font-size: 420px;
+  grid-column: 3/6;
+  grid-row: 2/4;
+  transform: rotate(190deg);
+  color: var(--color-orange);
+  justify-self: center;
+  align-self: center;
+  padding-bottom: 0px;
+  padding-top: 40px;
+  padding-right: 60px;
+}
+
+.bomb1 {
+  font-size: 250px;
+  grid-column: 1/4;
+  grid-row: 1/5;
+  color: #ee434b;
+  position: relative;
+  top: 50px;
+  left: -60px;
+}
+
+.splash-header {
+  width: 200px;
+  font-size: 40px;
+  font-family: gotham-medium;
+  z-index: 1;
+}
+
+.header1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 30px 0px 0px 30px;
+}
+
+.header2 {
+  grid-column: 7/8;
+  grid-row: 7/8;
+  padding: 0px 30px 30px 0px;
+  text-align: right;
+  justify-self: right;
+  align-self: end;
+}
+
+.cert1 {
+  grid-column: 7/8;
+  grid-row: 6/8;
+  color: #f179da;
+  font-size: 300px;
+  position: relative;
+  top: 10px;
+  left: 100px;
+  /* justify-self: right; */
+  /* align-self: end; */
 }
