@@ -6,6 +6,7 @@
   width: 100%;
   background-color: var(--color-black);
   position: fixed;
+  z-index: 5;
 }
 
 .notification > * {

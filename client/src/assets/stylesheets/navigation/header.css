@@ -8,6 +8,7 @@
   width: 100%;
   position: fixed;
   background: var(--color-light-black);
+  z-index: 5;
 }
 
 .header-inner-wrapper {

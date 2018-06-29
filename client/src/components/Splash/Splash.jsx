@@ -18,16 +18,32 @@ class Splash extends Component {
             <h2 className="splash-header header1"> SHARE YOUR WORST </h2>
             <i className="fas fa-certificate cert1"></i>
             <h2 className="splash-header header2"> SHARE YOUR BEST </h2>
+            <ul className="splash-links">
+              <li className="splash-link"> CONNECT </li>
+              <li className="splash-link"> JUDGE </li>
+              <li className="splash-link"> SHOP </li>
+            </ul>
         </div>
         <div>
-          <h2> Upload and share videos with your friends </h2>
-          <h2> Follow your friends and favorite gamers </h2>
-        </div>
-        <div>
-          <h2> Pass judgement on other players </h2>
-          <h2> Decide if they're troll or not </h2>
-        </div>
+          <div className="splash-sect s1">
+            <h1 className="splash-sect-title"> CONNECT </h1>
+            <h2 className="splash-sect-s1-b1"> Upload and share videos with your friends </h2>
+            <h2 className="splash-sect-s1-b2"> Follow your friends and favorite gamers </h2>
+          </div>
 
+          <div className="splash-sect s2">
+            <h1 className="splash-sect-title"> JUDGE </h1>
+            <h2 className="splash-sect-s2-b1"> Vote on videos </h2>
+            <h2 className="splash-sect-s2-b2"> Decide if they're troll or not </h2>
+          </div>
+
+          <div className="splash-sect s3">
+            <h1 className="splash-sect-title"> SHOP </h1>
+            <h2 className="splash-sect-s3-b1"> Make highlight reels </h2>
+            <h2 className="splash-sect-s3-b2"> or Hire a professional editor to do it for you </h2>
+            <i className="fas fa-money-bill-wave"></i>
+          </div>
+        </div>
       </div>
     );
   }

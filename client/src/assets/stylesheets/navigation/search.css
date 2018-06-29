@@ -1,7 +1,6 @@
 .search-all {
   display: flex;
   flex-direction: row;
-  /* border: .5px solid var(--color-lighter-gray); */
   border-radius: 2px;
   min-width: 150px;
   max-width: 350px;
