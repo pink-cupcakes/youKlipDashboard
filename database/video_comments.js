@@ -13,14 +13,10 @@ const getVideoComments = (video_id) => {
   });
 };
 
-const newComment = (comment, videoid) => {
+const newComment = (comment, userid, videoid) => {
   return new Promise((resolve, reject) => {
     const videoQuery =
-      `INSERT INTO video_comments (comments, video_id)
-      SELECT '${comment}', '${videoid}' FROM links
-      WHERE NOT EXISTS (SELECT * FROM video_comments
-        WHERE comments='${comment}' AND video_id='${videoid}'
-      ) LIMIT 1`;
+      `INSERT INTO video_comments (comments, user_id, video_id) VALUES (${comment}, ${userid}, ${videoid})`;
     db.query(videoQuery, (err, result) => {
       if (err) {
         return reject(err);

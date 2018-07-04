@@ -1,9 +1,9 @@
 const db = require('./index.js');
 const Promise = require('bluebird');
 
-const getUserVideos = (id) => {
+const getUserVideos = (userid) => {
   return new Promise((resolve, reject) => {
-    const userQuery = `SELECT video_url FROM links WHERE user_id = '${id}'`;
+    const userQuery = `SELECT id, video_url FROM links WHERE user_id = '${userid}'`;
     db.query(userQuery, (err, result) => {
       if (err) {
         return reject(err);
@@ -11,6 +11,18 @@ const getUserVideos = (id) => {
       return resolve(result);
     });
   });
+};
+
+const getVideoLikes = (videoid) => {
+  return new Promise((resolve, reject) => {
+    const videoQuery = `SELECT userid FROM likes WHERE linkid = '${videoid}'`;
+    db.query(videoQuery, (err, result) => {
+      if (err) {
+        return reject(err);
+      };
+      return resolve(result);
+    });
+  })
 };
 
 const newUpload = (url, userid) => {
@@ -31,4 +43,5 @@ const newUpload = (url, userid) => {
 };
 
 module.exports.getUserVideos = getUserVideos;
+module.exports.getVideoLikes = getVideoLikes;
 module.exports.newUpload = newUpload;
