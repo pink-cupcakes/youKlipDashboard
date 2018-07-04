@@ -5,6 +5,7 @@ const getUserVideos = (userid) => {
   return new Promise((resolve, reject) => {
     const userQuery = `SELECT id, video_url FROM links WHERE user_id = '${userid}'`;
     db.query(userQuery, (err, result) => {
+      console.log(result);
       if (err) {
         return reject(err);
       };
@@ -15,7 +16,7 @@ const getUserVideos = (userid) => {
 
 const getVideoLikes = (videoid) => {
   return new Promise((resolve, reject) => {
-    const videoQuery = `SELECT userid FROM likes WHERE linkid = '${videoid}'`;
+    const videoQuery = `SELECT userid FROM video_likes WHERE videoid = '${videoid}'`;
     db.query(videoQuery, (err, result) => {
       if (err) {
         return reject(err);

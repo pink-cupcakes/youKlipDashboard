@@ -1,18 +1,19 @@
-const express                      = require('express');
-const request                      = require('request');
-const bodyParser                   = require('body-parser');
-const axios                        = require('axios');
-const url                          = require('url');
-const cors                         = require('cors');
-const passport                     = require('passport');
-const twitchStrategy               = require('passport-twitch').Strategy;
-const cookieParser                 = require('cookie-parser');
-const cookieSession                = require('cookie-session');
-const cache                        = require('memory-cache');
-const AWS                          = require('aws-sdk');
-const { userLogin }                = require('../database/user_data.js');
+const express        = require('express');
+const request        = require('request');
+const bodyParser     = require('body-parser');
+const axios          = require('axios');
+const url            = require('url');
+const cors           = require('cors');
+const passport       = require('passport');
+const twitchStrategy = require('passport-twitch').Strategy;
+const cookieParser   = require('cookie-parser');
+const cookieSession  = require('cookie-session');
+const cache          = require('memory-cache');
+const AWS            = require('aws-sdk');
+const { userLogin }  = require('../database/user_data.js');
+const config         = require('./config.js');
 const { getUserVideos, getVideoLikes, newUpload } = require('../database/video_data.js');
-const config                       = require('./config.js');
+const { getVideoComments, newComment } = require('../database/video_comments.js');
 
 const app = express();
 
@@ -60,6 +61,11 @@ passport.deserializeUser(function(user, done) {
 
 app.get('/', (req, res) => {});
 
+/*
+  Twitch oAuth methods
+  Requests permission from Twitch to access emails
+  Uses Twitch userid as an indexing method internally (can cause issues in long run)
+*/
 app.get('/auth/twitch', passport.authenticate('twitch'));
 app.get('/auth/twitch/callback',
   passport.authenticate('twitch', { failureRedirect: 'http://localhost:3000/'}),
@@ -68,7 +74,7 @@ app.get('/auth/twitch/callback',
       res.redirect(url.format({
         pathname:'http://localhost:5000/user_videos',
         query: {
-          'id': user.id,
+          'userid': user.id,
           'username': user.username,
           'email': user.email
         }
@@ -77,15 +83,15 @@ app.get('/auth/twitch/callback',
 );
 
 /*
-Retieves the videos uploaded by a given user
-Input: userid = user id
-Output: array of tuples [videoid, videoUrl]
+  Retieves the videos uploaded by a given user
+  Input: userid = user id
+  Output: array of tuples [videoid, videoUrl]
 */
 app.get('/user_videos', (req, res) => {
   getUserVideos(req.query.userid)
   .then((videos) => {
-    videos = videos.map((videoURL) => {
-      return(videoURL.video_url);
+    videos = videos.map((videoData) => {
+      return(videoData);
     });
     res.redirect(url.format({
       pathname:'http://localhost:3000/home',
@@ -98,9 +104,9 @@ app.get('/user_videos', (req, res) => {
 
 
 /*
-Retrieve the users who have liked a given video
-Input: videoId = video id,
-Output: an array of users who have liked the video. To show the number of likes, return array length
+  Retrieve the users who have liked a given video
+  Input: videoId = video id,
+  Output: an array of users who have liked the video. To show the number of likes, return array length
 */
 app.get('/videoLikes', (req, res) => {
   getVideoLikes(req.query.videoId)
@@ -108,20 +114,53 @@ app.get('/videoLikes', (req, res) => {
       res.send(JSON.stringify(users_liked));
     })
     .catch((err) => {
-      throw(err);
+      res.status(500).send(err);
     })
 })
 
+
+/*
+  Creates new video upload for user
+  Input: url = YouTube URL
+        id = userid
+  Output: N/A - error will throw error
+*/
 app.post('/video_upload', (req, res) => {
   newUpload(req.query.url, req.query.id)
     .catch((err) => {
-      throw(err);
+      res.status(500).send(err);
     });
   res.send();
 });
 
-app.get('/get_video', (req, res) => {
-  
+/*
+  Retrieves all comments from a given videoid
+  Input: videoid = video id
+  Output: Array of tuples [userid, comment]
+*/
+app.get('/video_comments', (req, res) => {
+  getVideoComments(req.query.videoid)
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      res.status(500).send(err);
+    })
+});
+
+/*
+  Creates new video comment for user
+  Input: comment = Comment input
+         userid = user id
+         videoid = video id
+  Output: N/A - error will throw error
+*/
+app.post('/video_newComment', (req, res) => {
+  newComment(req.query.comment, req.query.userid, req.query.videoid)
+    .catch((err) => {
+      res.status(500).send(err);
+    });
+  res.send();
 })
 
 // let params = {
