@@ -29,10 +29,9 @@ const getVideoLikes = (videoid) => {
 const newUpload = (url, userid) => {
   return new Promise((resolve, reject) => {
     const videoQuery =
-      `INSERT INTO links (video_url, user_id)
-      SELECT '${url}', '${userid}' FROM links
+      `INSERT INTO links (video_url, user_id) SELECT '${url}', '${userid}' FROM links
       WHERE NOT EXISTS (SELECT * FROM links
-        WHERE video_url='${url}' AND user_id='${userid}'
+      WHERE video_url='${url}' AND user_id='${userid}'
       ) LIMIT 1`;
     db.query(videoQuery, (err, result) => {
       if (err) {

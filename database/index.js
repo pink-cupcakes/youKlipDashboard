@@ -6,7 +6,7 @@ var dbPool = mysql.createPool({
   user           : config.RDS_USERNAME,
   password       : config.RDS_PASSWORD,
   port           : config.RDS_PORT,
-  database       : 'skillshot'
+  database       : config.RDS_DATABASE
 });
 
 dbPool.getConnection(function(err, connection) {

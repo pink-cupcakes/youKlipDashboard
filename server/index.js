@@ -1,14 +1,9 @@
 const express        = require('express');
-const request        = require('request');
 const bodyParser     = require('body-parser');
-const axios          = require('axios');
 const url            = require('url');
 const cors           = require('cors');
 const passport       = require('passport');
 const twitchStrategy = require('passport-twitch').Strategy;
-const cookieParser   = require('cookie-parser');
-const cookieSession  = require('cookie-session');
-const cache          = require('memory-cache');
 const AWS            = require('aws-sdk');
 const { userLogin }  = require('../database/user_data.js');
 const config         = require('./config.js');
@@ -59,12 +54,10 @@ passport.deserializeUser(function(user, done) {
   done(null, user);
 });
 
-app.get('/', (req, res) => {});
-
 /*
-  Twitch oAuth methods
-  Requests permission from Twitch to access emails
-  Uses Twitch userid as an indexing method internally (can cause issues in long run)
+Twitch oAuth methods
+Requests permission from Twitch to access emails
+Uses Twitch userid as an indexing method internally (can cause issues in long run)
 */
 app.get('/auth/twitch', passport.authenticate('twitch'));
 app.get('/auth/twitch/callback',
@@ -83,9 +76,9 @@ app.get('/auth/twitch/callback',
 );
 
 /*
-  Retieves the videos uploaded by a given user
-  Input: userid = user id
-  Output: array of tuples [videoid, videoUrl]
+Retieves the videos uploaded by a given user
+Input: userid = user id
+Output: array of tuples [videoid, videoUrl]
 */
 app.get('/user_videos', (req, res) => {
   getUserVideos(req.query.userid)
@@ -104,9 +97,9 @@ app.get('/user_videos', (req, res) => {
 
 
 /*
-  Retrieve the users who have liked a given video
-  Input: videoId = video id,
-  Output: an array of users who have liked the video. To show the number of likes, return array length
+Retrieve the users who have liked a given video
+Input: videoId = video id,
+Output: an array of users who have liked the video. To show the number of likes, return array length
 */
 app.get('/videoLikes', (req, res) => {
   getVideoLikes(req.query.videoId)
@@ -120,10 +113,10 @@ app.get('/videoLikes', (req, res) => {
 
 
 /*
-  Creates new video upload for user
-  Input: url = YouTube URL
-        id = userid
-  Output: N/A - error will throw error
+Creates new video upload for user
+Input: url = YouTube URL
+      id = userid
+Output: N/A - error will throw error
 */
 app.post('/video_upload', (req, res) => {
   newUpload(req.query.url, req.query.id)
@@ -134,9 +127,9 @@ app.post('/video_upload', (req, res) => {
 });
 
 /*
-  Retrieves all comments from a given videoid
-  Input: videoid = video id
-  Output: Array of tuples [userid, comment]
+Retrieves all comments from a given videoid
+Input: videoid = video id
+Output: Array of tuples [userid, comment]
 */
 app.get('/video_comments', (req, res) => {
   getVideoComments(req.query.videoid)
@@ -149,11 +142,12 @@ app.get('/video_comments', (req, res) => {
 });
 
 /*
-  Creates new video comment for user
-  Input: comment = Comment input
-         userid = user id
-         videoid = video id
-  Output: N/A - error will throw error
+Creates new video comment for user
+Input:
+  comment = Comment input
+  userid = user id
+  videoid = video id
+Output: N/A - error will throw error
 */
 app.post('/video_newComment', (req, res) => {
   newComment(req.query.comment, req.query.userid, req.query.videoid)
@@ -161,19 +155,7 @@ app.post('/video_newComment', (req, res) => {
       res.status(500).send(err);
     });
   res.send();
-})
-
-// let params = {
-//     InstanceIds: ['i-09c7d8998b882f858']
-// };
-
-// ec2.describeInstances(params, function(err, data) {
-//     if (err) {
-//       console.log('Error', err.stack);
-//     } else {
-//       console.log('Success', JSON.stringify(data));
-//     };
-// });
+});
 
 let server = app.listen(5000, function() {
   let port = server.address().port;
