@@ -18,7 +18,7 @@
   "homepage": "https://github.com/skill-shot/dev_site#readme",
   "dependencies": {
     "aws-sdk": "^2.245.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
